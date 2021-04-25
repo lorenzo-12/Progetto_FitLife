@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table id="table">
+            <tr>
+                <th>CARNE (100g)</th><th></th>
+                <th>PESCE (100g)</th><th></th>
+                <th>BISCOTTO (100g)</th><th></th>
+            </tr>
+            <tr><td><img src="carne.png" width="100px" height="100px"></td>
+                <td>PROTEINE: 50g <br>
+                    CALORIE: 20g <br>
+                    CARBOIDRATI: 30g <br>
+                    <button class="b" type="button" name="carne" onclick="diminuisci('carne')">-</button>
+                    <input type="number" class="valore" id="carne" name="carne" style="width: 2em;" onchange="calcola()" value="0" min="0">
+                    <button class="b" type="button" name="carne" onclick="aumenta('carne')">+</button>
+                </td>
+                <td><img src="pesce.png" width="100px" height="100px"></td>
+                <td>PROTEINE: 30g <br>
+                    CALORIE: 10g <br>
+                    CARBOIDRATI: 15g <br>
+                    <button class="b" type="button" name="pesce" onclick="diminuisci('pesce')">-</button>
+                    <input type="number" class="valore" id="pesce" name="pesce" style="width: 2em;" onchange="calcola()" value="0" min="0">
+                    <button class="b" type="button" name="pesce" onclick="aumenta('pesce')">+</button>
+                
+                </td>
+                <td><img src="biscotto.png" width="100px" height="100px"></td>
+                <td>PROTEINE: 60g <br>
+                    CALORIE: 40g <br>
+                    CARBOIDRATI: 100g <br>
+                    <button class="b" type="button" name="biscotto" onclick="diminuisci('biscotto')">-</button>
+                    <input type="number" class="valore" id="biscotto" name="biscotto" style="width: 2em;" onchange="calcola()" value="0" min="0">
+                    <button class="b" type="button" name="biscotto" onclick="aumenta('biscotto')">+</button>
+                
+                </td>
+        </table>
+        TOTALE PROTEINE: <label id="proteine">0</label><br>
+        TOTALE CALORIE: <label id="calorie">0</label><br>
+        TOTALE CARBOIDRATI: <label id="carboidrati">0</label><br>
+        ALIMENTI MANGIATI: <label id=alimentimangiati>niente</label><br>
+        <script type="text/javascript" lang="javascript" src="quasi.js"></script>
+    </body>
+
+</html>
