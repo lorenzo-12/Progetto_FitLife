@@ -34,7 +34,8 @@ header{
     padding: 5px 0%;
     padding-left: 3%;
     background-color: #9797976b;
-
+    position: sticky;
+    top:0; /* H0 AGGIUNTO SOLO POSITION STICKY E TOP:0, MA NON SO PERCHE FUNZIONA, TOCCA VEDE AHAHAHAH*/
 }
 
 .logo, .nav_links {
