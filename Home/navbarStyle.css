@@ -4,8 +4,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #fefee9;
+    
 }
+
 
 li, a, button {
     font-family: "Roboto", sans-serif;
@@ -13,7 +14,17 @@ li, a, button {
     font-size: 18px;
     color: #edf0f1;
     text-decoration: none;
-    background-color: #87d37c;
+   /* background-color: #87d37c;*/
+}
+
+.header-container{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(Images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
 }
 
 header{
@@ -22,12 +33,13 @@ header{
     align-items: center;
     padding: 5px 0%;
     padding-left: 3%;
-    background-color: #87d37c;
-
+    background-color: #9797976b;
+    position: sticky;
+    top:0; /* H0 AGGIUNTO SOLO POSITION STICKY E TOP:0, MA NON SO PERCHE FUNZIONA, TOCCA VEDE AHAHAHAH*/
 }
 
 .logo, .nav_links {
-    background-color: #87d37c;
+    /* background-color: #87d37c;*/
 }
 
 .logo {
