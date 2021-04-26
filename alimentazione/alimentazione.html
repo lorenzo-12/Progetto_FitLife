@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="alimentazione.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <!--    BOTTONI   -->
+        <div class="bottoni_scegli">
+            <button onclick="show_hide('alimento_carne')"> CARNE</button>
+            <button onclick="show_hide('alimento_dolce')">DOLCI</button>
+            <button onclick="show_hide('alimento_pesce')">PESCE</button>
+        </div>
+
+        <!--   ALIMENTI  -->
+        <div class="gruppo_alimenti_carne">
+
+            <img class="alimento_carne" id="imgC1" src="carne1.png">
+            <span id="spanC1" class="alimento_carne"><br> 
+                PROTEINE: 10g <br>
+                CALORIE: 10g <br>
+                CARBOIDRATI: 10g <br>
+            </span>
+
+            <img class="alimento_carne" id="imgC2" src="carne2.png">
+            <span id="spanC2" class="alimento_carne"><br> 
+                PROTEINE: 10g <br>
+                CALORIE: 10g <br>
+                CARBOIDRATI: 10g <br>
+            </span>
+
+            <img class="alimento_carne" id="imgC3" src="carne3.png">
+            <span id="spanC3" class="alimento_carne"><br> 
+                PROTEINE: 10g <br>
+                CALORIE: 10g <br>
+                CARBOIDRATI: 10g <br>
+            </span>
+
+        </div>
+
+        <div class="gruppo_alimenti_dolce">
+
+            <img class="alimento_dolce" id="imgD1" src="dolce1.png">
+            <span id="spanD1" class="alimento_dolce"><br> 
+                PROTEINE: 20g <br>
+                CALORIE: 20g <br>
+                CARBOIDRATI: 20g <br>
+            </span>
+
+            <img class="alimento_dolce" id="imgD2" src="dolce2.png">
+            <span id="spanD2" class="alimento_dolce"><br> 
+                PROTEINE: 20g <br>
+                CALORIE: 20g <br>
+                CARBOIDRATI: 20g <br>
+            </span>
+
+            <img class="alimento_dolce" id="imgD3" src="dolce3.png">
+            <span id="spanD3" class="alimento_dolce"><br> 
+                PROTEINE: 20g <br>
+                CALORIE: 20g <br>
+                CARBOIDRATI: 20g <br>
+            </span>
+
+        </div>
+
+        
+
+
+
+    </div>
+
+    <!--   VALORI NASCOSTI PER TENERE IL CONTO DEGLI ALIMENTI -->
+
+    <input type="number" name="carne1" class="valori_nascosti" id="valoreC1" value="0">
+    <input type="number" name="carne2" class="valori_nascosti" id="valoreC2" value="0">
+    <input type="number" name="carne3" class="valori_nascosti" id="valoreC3" value="0">
+
+    <input type="number" name="dolce1" class="valori_nascosti" id="valoreD1" value="0">
+    <input type="number" name="dolce2" class="valori_nascosti" id="valoreD2" value="0">
+    <input type="number" name="dolce3" class="valori_nascosti" id="valoreD3" value="0">
+    
+    <!--  BOTTONI PER AUMENTARE E DIMINUIRE IL VALORE DEGLI ALIMENTI   -->
+    <br><br><br><br><br><br><br>
+    <div class="bottoni_conta">
+        <div class="bottone_conta_1">
+            <button type="button" class="bottone_conta_1" id="bc1" onclick="incrementa('valoreBC1',-1)">-</button>
+            <input type="number" class="bottone_conta_1" id="valoreBC1" value="0" onchange="modifica('valoreBC1')">
+            <button type="button" class="bottone_conta_1" id="bc1" onclick="incrementa('valoreBC1',1)">+</button>
+        </div>
+
+        <div class="bottone_conta_2">
+            <button type="button" class="bottone_conta_2" id="bc2" onclick="incrementa('valoreBC2',-1)">-</button>
+            <input type="number" class="bottone_conta_2" id="valoreBC2" value="0" onchange="modifica('valoreBC2')">
+            <button type="button" class="bottone_conta_2" id="bc2" onclick="incrementa('valoreBC2',1)">+</button>
+        </div>
+
+        <div class="bottone_conta_3">
+            <button type="button" class="bottone_conta_3" id="bc3" onclick="incrementa('valoreBC3',-1)">-</button>
+            <input type="number" class="bottone_conta_3" id="valoreBC3" value="0" onchange="modifica('valoreBC3')">
+            <button type="button" class="bottone_conta_3" id="bc3" onclick="incrementa('valoreBC3',1)">+</button>
+        </div>
+    </div>
+    <br><br>
+    TOTALE PROTEINE: <label id="proteine">0</label><br>
+    TOTALE CALORIE: <label id="calorie">0</label><br>
+    TOTALE CARBOIDRATI: <label id="carboidrati">0</label><br>
+    ALIMENTI MANGIATI: <label id=alimentimangiati></label><br>
+    <script type="text/javascript" lang="javascript" src="alimentazione.js"></script>
+</body>
+</html>

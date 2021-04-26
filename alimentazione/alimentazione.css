@@ -1,0 +1,43 @@
+#imgC1, #imgC2, #imgC3, #imgD1, #imgD2, #imgD3{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+#spanC1, #spanC2, #spanC3, #spanD1, #spanD2, #spanD3{
+    float: left;
+}
+
+.container{
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.gruppo_alimenti_dolce{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.gruppo_alimenti_carne{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+#bc1, #bc2, #bc3{
+    width: 25px;
+    float: left;
+}
+
+#valoreBC1, #valoreBC2, #valoreBC3{
+    width: 3em;
+    float: left
+}
+.valori_nascosti{
+    visibility: hidden;
+}
+
