@@ -1,7 +1,19 @@
-var carne = {
+var carne1 = {
     p: "50",
     c: "20",
     cb: "30"
+}
+
+var carne2 = {
+    p: "25",
+    c: "10",
+    cb: "15"
+}
+
+var carne3 = {
+    p: "25",
+    c: "10",
+    cb: "15"
 }
 
 var pesce = {
@@ -10,12 +22,23 @@ var pesce = {
     cb: "15"
 }
 
-var biscotto = {
+var dolce1 = {
     p: "60",
     c: "40",
     cb: "100"
 }
 
+var dolce2 = {
+    p: "60",
+    c: "40",
+    cb: "100"
+}
+
+var dolce3 = {
+    p: "60",
+    c: "40",
+    cb: "100"
+}
 function aumenta(s){
     var elem = document.getElementById(s);
     elem.value++;
@@ -28,7 +51,7 @@ function diminuisci(s){
 }
 
 function calcola(){
-    var l = document.getElementsByClassName("valore");
+    var l = document.getElementsByName("valore");
     var pro = document.getElementById("proteine");
     var cal = document.getElementById("calorie");
     var car = document.getElementById("carboidrati");
@@ -38,19 +61,43 @@ function calcola(){
     var c = 0;
     var cb = 0;
     for(var k=0; k<l.length; k++){
-        if (l[k].name=="biscotto"){
-            p += l[k].value*biscotto.p;
-            c += l[k].value*biscotto.c;
-            cb += l[k].value*biscotto.cb;
-            if(l[k].value>0)string += "biscotto (" + (l[k].value*100).toFixed(2) + "g)  ";
+        if (l[k].id=="numB1"){
+            p += l[k].value*dolce1.p;
+            c += l[k].value*dolce1.c;
+            cb += l[k].value*dolce1.cb;
+            if(l[k].value>0)string += "dolce1 (" + (l[k].value*100).toFixed(2) + "g)  ";
         }
-        else if(l[k].name=="carne"){
-            p += l[k].value*carne.p;
-            c += l[k].value*carne.c;
-            cb += l[k].value*carne.cb;
-            if(l[k].value>0)string += "carne (" + (l[k].value*100).toFixed(2) + "g)  ";
+        else if (l[k].id=="numB2"){
+            p += l[k].value*dolce2.p;
+            c += l[k].value*dolce2.c;
+            cb += l[k].value*dolce2.cb;
+            if(l[k].value>0)string += "dolce2 (" + (l[k].value*100).toFixed(2) + "g)  ";
         }
-        else if(l[k].name=="pesce"){
+        else if (l[k].id=="numB3"){
+            p += l[k].value*dolce3.p;
+            c += l[k].value*dolce3.c;
+            cb += l[k].value*dolce3.cb;
+            if(l[k].value>0)string += "dolce3 (" + (l[k].value*100).toFixed(2) + "g)  ";
+        }
+        else if(l[k].id=="numC1"){
+            p += l[k].value*carne1.p;
+            c += l[k].value*carne1.c;
+            cb += l[k].value*carne1.cb;
+            if(l[k].value>0)string += "carne1 (" + (l[k].value*100).toFixed(2) + "g)  ";
+        }
+        else if(l[k].id=="numC3"){
+            p += l[k].value*carne3.p;
+            c += l[k].value*carne3.c;
+            cb += l[k].value*carne3.cb;
+            if(l[k].value>0)string += "carne2 (" + (l[k].value*100).toFixed(2) + "g)  ";
+        }
+        else if(l[k].id=="numC2"){
+            p += l[k].value*carne2.p;
+            c += l[k].value*carne2.c;
+            cb += l[k].value*carne2.cb;
+            if(l[k].value>0)string += "carne3 (" + (l[k].value*100).toFixed(2) + "g)  ";
+        }
+        else if(l[k].id=="numP"){
             p += l[k].value*pesce.p;
             c += l[k].value*pesce.c;
             cb += l[k].value*pesce.cb;
@@ -64,7 +111,7 @@ function calcola(){
     al.innerHTML = string;
 }
 
-var list = document.getElementsByClassName("b");
+var list = document.getElementsByName("b"); 
 
 for(var i=0; i<list.length; i++){
     list[i].addEventListener('click', function(){
@@ -72,3 +119,65 @@ for(var i=0; i<list.length; i++){
     });
     
 }
+
+
+var ecarne = document.getElementsByClassName("alimenti_carne");
+//var epesce = document.getElementsByClassName("alimenti_pesce");
+var edolci = document.getElementsByClassName("alimenti_dolci");
+for(var i=0; i<ecarne.length;i++){
+    ecarne[i].style.visibility="hidden";
+    edolci[i].style.visibility="hidden";
+    
+
+}
+
+
+//0=hidden  1=visible
+var c=0;
+var d=0;
+function show_hide(s){
+    if(s=="alimenti_carne"){
+        c++;
+        var list = document.getElementsByClassName("alimenti_dolci");
+        for(var i=0; i<list.length; i++){
+            list[i].style.visibility = "hidden";
+            d=0;
+        }
+        if(c%2==1){
+            var list = document.getElementsByClassName("alimenti_carne");
+            for(var i=0; i<list.length; i++){
+                list[i].style.visibility = "visible";
+            }
+        }
+        if(c%2==0){
+            var list = document.getElementsByClassName("alimenti_carne");
+            for(var i=0; i<list.length; i++){
+                list[i].style.visibility = "hidden";
+            }
+        }
+    }
+    
+    else if(s=="alimenti_dolci"){
+        d++;
+        var list = document.getElementsByClassName("alimenti_carne");
+        for(var i=0; i<list.length; i++){
+            list[i].style.visibility = "hidden";
+            c=0;
+        }
+        if(d%2==1){
+            var list = document.getElementsByClassName("alimenti_dolci");
+            for(var i=0; i<list.length; i++){
+                list[i].style.visibility = "visible";
+            }
+        }
+        if(d%2==0){
+            var list = document.getElementsByClassName("alimenti_dolci");
+            for(var i=0; i<list.length; i++){
+                list[i].style.visibility = "hidden";
+            }
+        }
+    }
+    
+    
+}
+
