@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Questo meta qua sotto serve per il mobile layout-->
         <meta name="viewport" content="with-device-width, initial-scale=1.0">
         <title>HOME</title>
         <link rel="stylesheet" href="navbarStyle.css">
+        <script src="homeJS.js"></script>
 
     </head>
     <body>
@@ -11,7 +13,7 @@
             <header>
                 <!-- Navigation Bar-->
                 <img class="logo" src="./dumbell.svg" alt="logo" width="75px" height="50px" >
-                <nav>
+                <nav class="navbar">
                     <ul class="nav_links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Chi siamo</a></li>
@@ -19,12 +21,19 @@
                         <li><a href="#">Alimentazione</a></li>
                         <li><a href="#">Shop</a></li>
                     </ul>
+                    <div class="hidden-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <a class="login" href="#"><button>Login</button></a>
                 </nav>
-                <a class="cta" href="#"><button>Login</button></a>
+                       
             </header>
         </section>
+        <!--TOCCA CAPIRE COME ORGANIZZARE GLI SCRIPT-->
         <h1>DESCRIZIONE</h1>
-        
+        <!--CHI SIAMO-->
         <div class="team-section">
             <h1>Chi siamo</h1>
             <span class="border"></span>
