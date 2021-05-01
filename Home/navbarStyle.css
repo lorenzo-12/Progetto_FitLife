@@ -133,7 +133,7 @@ button:hover{
     border-radius: 2px;
     background-color: #edf0f1;
 }
-
+/* Roba per mobile */
 @media screen and (max-width:862px) {
     body{
         overflow-x: hidden;

@@ -8,6 +8,21 @@
     </head>
     <body>
         <section class="header-container">
+            <script type="text/javascript">
+                const slider = document.querySelector(".header-container");
+                var images = ["url(Images/banner1.jpg)",
+                              "url(Images/banner2.jpg)",
+                              "url(Images/banner3.jpg)",
+                              "url(Images/banner4.jpg)",
+                            ];
+                setInterval(function() {
+                    var bg = images[Math.floor(Math.random()*images.length)];
+                    slider.style.background = bg;
+                    slider.style.backgroundPosition = "center";
+                    slider.style.backgroundSize = "cover";
+                    slider.style.transition = "1s ease";
+                },5000)
+            </script>
             <header>
                 <!-- Navigation Bar-->
                 <img class="logo" src="./dumbell.svg" alt="logo">
