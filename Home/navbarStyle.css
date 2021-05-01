@@ -31,24 +31,28 @@ header{
     justify-content: flex-start;
     align-items: center;
     height: 9vh;
-    min-height: 60px;
+    /* min-height: 60px; */
     /* padding: 5px 0%; */
-    padding-left: 3%;
-    padding-right: 6.5%;
+    /* padding-left: 3%;
+    padding-right: 6.5%; */
     background-color: #9797976b;
     position: sticky;
     top:0; /* H0 AGGIUNTO SOLO POSITION STICKY E TOP:0, MA NON SO PERCHE FUNZIONA, TOCCA VEDE AHAHAHAH*/
 }
 
 .logo {
-    cursor: pointer;    
+    cursor: pointer;
+    height:8vh;
+    width: 60px;
+    margin-left: 3%;
+    margin-right: 1.2%;   
 }
 
 nav {
     flex: auto;
     display: inline-flex;
     align-items: center;
-    margin-left: 0.7rem;
+    /* margin-left: 0.7rem; */
     
 } 
 
@@ -62,6 +66,7 @@ nav {
 
 .nav_links li{
     padding: 0.7rem 1.2rem;
+    margin-top: 0.2em;
     width: max-content;
     position: relative; 
 }
@@ -77,7 +82,7 @@ nav {
 .nav_links a::after{
     content: '';
     display: block;
-    height: 3px;
+    height: 0.2em;
     width: 0%;
     background-color: darkred;
 
@@ -86,7 +91,7 @@ nav {
 .nav_links a:hover::after{
     content: '';
     display: block;
-    height: 3px;
+    height: 0.2em;
     width: 100%;
     background-color: rgb(228, 121, 0);
     margin: auto;
@@ -96,6 +101,7 @@ nav {
 
 .login {
     margin-left: auto;
+    margin-right: 3%;
 
 }
 
@@ -115,7 +121,6 @@ button:hover{
 
 .hidden-menu {
     display: none;
-    margin-left: auto;
 }
 
 .hidden-menu div {
@@ -123,6 +128,8 @@ button:hover{
     width: 2em;
     height: 0.4em;
     margin: 0.3rem;
+    margin-left: 0;
+    margin-right: 0;
     border-radius: 2px;
     background-color: #edf0f1;
 }
@@ -131,15 +138,21 @@ button:hover{
     body{
         overflow-x: hidden;
     }
+
+    .logo{
+        display: none;
+    }
+
     .nav_links{
         display: flex;
         flex-direction: column;
+        justify-content:space-evenly;
         align-items: center;
         position: absolute;
         right: 0px;
         top: 9vh;
         height: 91vh;
-        width: 50%;
+        width: 100%;
         background-color: #9797976b;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
@@ -150,13 +163,18 @@ button:hover{
         opacity: 0;
     }
     
+    .nav_links a{
+        font-size: 1.5em;
+    }
+    
     .hidden-menu{
         display: block;
+        margin-left: 3%;
         cursor: pointer;
     }
 
     .login{
-        margin-left: 0;
+        font-size: 1.5em;
     }
 }
 
@@ -164,6 +182,29 @@ button:hover{
     transform: translateX(0%);
 }
 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-8px,8px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-8px,-8px);
+}
 
 /* CHI SIAMO */
 .team-section{
