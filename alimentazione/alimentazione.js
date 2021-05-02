@@ -36,7 +36,7 @@ var carne2 = {
     c: 10,
     cb: 10
 }
-var carne3 = {
+var pasta = {
     p: 10,
     c: 10,
     cb: 10
@@ -65,7 +65,7 @@ var lva = [
     document.getElementById("valoreC2"),
     carne2,
     document.getElementById("valoreC3"),
-    carne3,
+    pasta,
 
     document.getElementById("valoreD1"),
     dolce1,
@@ -276,7 +276,7 @@ function calcola(){
         
     }
     
-    pro.innerHTML = p.toFixed(2);
+    pro.innerHTML = "TOTALE PROTEINE:" + p.toFixed(2);
     cal.innerHTML = c.toFixed(2);
     car.innerHTML = cb.toFixed(2);
     al.innerHTML = str;
