@@ -37,6 +37,84 @@ body{
     background-color: #212529 ; /*colore dark di bootstrap*/
 }
 
+/*I NOSTRI SERVIZI*/
+
+
+.servizi{
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.servizio{
+    margin: 2%;
+    overflow: hidden;
+    padding: 2% 1%;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.3s ease-in,
+                transform 0.3s ease-in;
+    width: 20%;
+}
+
+.servizio:hover{
+    background-color: #198754;
+    transform: translateY(-3px);
+}
+
+.servizio::before{ /* non so che fa */
+    content: '';
+    border-width: 20px;
+    border-style: solid;
+    border-color: #222f3e #222f3e rgba(1,1,1,0.4) rgba(0,0,0,0.4);
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    transition: right 0.3s ease-out,
+                top 0.3s ease-out;
+}
+
+.servizio:hover::before{
+    right: 0;
+    top: 0;
+}
+
+.titolo, .descrizione{
+    color: whitesmoke;
+}
+
+.servizio > i{
+    display: block;
+    color: #198754;
+    font-size: 4rem;
+    margin-bottom: 0.9rem;
+    transition: color 0.3s ease-out;
+}
+
+.servizio > .titolo{
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.55rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    transition: color 0.3s ease-out;
+}
+
+.servizio > .descrizione{
+    line-height: 1.55rem;
+    margin: 0;
+    transition: color 0.3s ease-out;
+}
+
+.servizio:hover > i,
+.servizio:hover > .titolo,
+.servizio:hover > .descrizione{
+    color: whitesmoke;
+}
+
+
 /* CHI SIAMO */
 .team-section{
     overflow: hidden;
