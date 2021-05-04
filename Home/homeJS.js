@@ -1,7 +1,7 @@
 const navSlide = () => {
-    const menu = document.querySelector(".hidden-menu");
-    const nav = document.querySelector(".nav_links");
-    const navLinks = document.querySelectorAll(".nav_links li");
+    const menu = document.querySelector(".Myhidden-menu");
+    const nav = document.querySelector(".Mynav_links");
+    const navLinks = document.querySelectorAll(".Mynav_links li");
 
     menu.addEventListener("click", () => {
         //toggle navbar
