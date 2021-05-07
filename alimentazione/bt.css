@@ -1,0 +1,58 @@
+@import "../Home/styleTest.css";
+
+
+
+.alimenti{
+    display: inline-flex;
+}
+
+.carne, .pesce, .pasta, .frutta{
+    width: 100%;
+    height: 100%;
+}
+
+.CARNE{
+    width: 25%;
+    position: relative;
+    background: rgba(13, 13, 236, 1);
+}
+.PESCE{
+    width: 25%;
+    position: relative;
+    background: rgba(17, 236, 17, 1);
+}
+.PASTA{
+    width: 25%;
+    position: relative;
+    background: rgba(231, 17, 17, 1);
+}
+.FRUTTA{
+    width: 25%;
+    position: relative;
+    background: rgba(240, 240, 8, 1);
+}
+
+
+.CARNE:hover #ca1, .PESCE:hover #pe1, .PASTA:hover #pa1, .FRUTTA:hover #fr1{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
+.collapse{
+    display: inline-flex;
+}
+
+#card_ca1, #card_ca2, #card_ca3,#card_ca4{
+    width: 15vw;
+    margin: 3%;
+}
+#card_pe1, #card_pe2, #card_pe3,#card_pe4{
+    width: 15vw;
+    margin: 3%;
+}
+
+.card-img{
+    width: 15vw;
+    height: 20vh;
+}
