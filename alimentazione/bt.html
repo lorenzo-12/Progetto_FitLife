@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./test.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="../Home/test.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Chi siamo</a>
@@ -33,7 +33,7 @@
               <a class="nav-link" href="../Scheda/Scheda.html">Scheda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../alimentazione/alimentazione.html">Alimentazione</a>
+              <a class="nav-link" href="../alimentazione/bt.html">Alimentazione</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,74 +53,72 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="alimenti justify-content-md-around">
-          <div class="CARNE rounded">
+    <div class="container-fluid" id="cont">
+        <div class="alimenti">
+          <div class="CARNE rounded" id="CARNE">
             <a href="#collapse_carne" data-bs-toggle="collapse">
               <img src="carne_d.png" id="ca1" class="carne img-responsive img-circle rounded">
             </a>
           </div>
-          <div class="PESCE rounded">
+          <div class="PESCE rounded" id="PESCE">
             <a href="#collapse_pesce" data-bs-toggle="collapse">
               <img src="pesce_d.png" id="pe1" class="pesce img-responsive img-circle rounded">
             </a>
           </div>
-          <div class="PASTA rounded">
+          <div class="PASTA rounded" id="PASTA">
             <a href="#collapse_pasta" data-bs-toggle="collapse">
               <img src="pasta_d.png" id="pa1" class="pasta img-responsive img-circle rounded">
             </a>
           </div>
-          <div class="FRUTTA rounded">
+          <div class="FRUTTA rounded" id="FRUTTA">
             <a href="#collapse_frutta" data-bs-toggle="collapse">
               <img src="frutta_d.png" id="fr1" class="frutta img-responsive img-circle rounded">
             </a>
           </div>
         </div>
-
+        
           <div class="collapse" id="collapse_carne">
-
-            <div class="card d-inline-flex" id="card_ca1">
-              <img src="carne1.png" class="card-img">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  PROTEINE: 10g <br>
-                  CARBOIDRATI: 10g <br>
-                  CALORIE: 10g
+              <div class="card d-inline-flex" id="card_ca1">
+                <img src="carne1.png" class="card-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    PROTEINE: 10g <br>
+                    CARBOIDRATI: 10g <br>
+                    CALORIE: 10g
+                  </div>
+              </div>
+              <div class="card d-inline-flex" id="card_ca2">
+                <img src="carne1.png" class="card-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    PROTEINE: 10g <br>
+                    CARBOIDRATI: 10g <br>
+                    CALORIE: 10g</p>
                 </div>
-            </div>
-            <div class="card d-inline-flex" id="card_ca2">
-              <img src="carne1.png" class="card-img">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  PROTEINE: 10g <br>
-                  CARBOIDRATI: 10g <br>
-                  CALORIE: 10g</p>
               </div>
-            </div>
-            <div class="card d-inline-flex" id="card_ca3">
-              <img src="carne1.png" class="card-img">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  PROTEINE: 10g <br>
-                  CARBOIDRATI: 10g <br>
-                  CALORIE: 10g</p>
+              <div class="card d-inline-flex" id="card_ca3">
+                <img src="carne1.png" class="card-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    PROTEINE: 10g <br>
+                    CARBOIDRATI: 10g <br>
+                    CALORIE: 10g</p>
+                </div>
               </div>
-            </div>
-            <div class="card d-inline-flex" id="card_ca4">
-              <img src="carne1.png" class="card-img">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  PROTEINE: 10g <br>
-                  CARBOIDRATI: 10g <br>
-                  CALORIE: 10g</p>
+              <div class="card d-inline-flex" id="card_ca4">
+                <img src="carne1.png" class="card-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    PROTEINE: 10g <br>
+                    CARBOIDRATI: 10g <br>
+                    CALORIE: 10g</p>
+                </div>
               </div>
-            </div>
-          
+              
           </div>
 
           <div class="collapse" id="collapse_pesce">
@@ -167,10 +165,8 @@
             </div>
           
           </div>
-          
-    </div>
 
-  </div>
+    </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
