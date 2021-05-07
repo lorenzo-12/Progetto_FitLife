@@ -10,6 +10,12 @@ body{
     width: 75px;
 }
 
+#homeAnchor{ /* PROVVISORIO */
+    display: none;
+    padding-top: 0;
+    scroll-behavior: smooth;
+}
+
 .Myheader-container{
     min-height: 88vh;
     width: 100%;
@@ -41,7 +47,7 @@ body{
 
 
 .servizi{
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     /* flex-direction: row; */
     justify-content: center;
@@ -56,15 +62,16 @@ body{
     text-align: center;
     transition: background-color 0.3s ease-in,
                 transform 0.3s ease-in;
-    width: 20%;
+    width: 22vw;
 }
 
 .servizio:hover{
+    cursor: pointer;
     background-color: #198754;
     transform: translateY(-3px);
 }
 
-.servizio::before{ /* non so che fa */
+.servizio::before{ /* fa l'animazione del foglio */
     content: '';
     border-width: 20px;
     border-style: solid;
@@ -114,8 +121,22 @@ body{
     color: whitesmoke;
 }
 
-
-/* CHI SIAMO */
+@media screen and (max-width:567px) {
+    .servizi{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .servizio{
+        width: fit-content;
+    }
+}
+/*-----------------------------------------------*/
+/*-----------------------------------------------*/
+/* CHI SIAMO ------------------------------------*/
+#chisiamoAnchor{
+    scroll-behavior: smooth;
+}
 .team-section{
     overflow: hidden;
     text-align: center;
@@ -182,4 +203,62 @@ body{
     text-align: center;
     text-transform: uppercase;
     font-size: 22px;
+}
+
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+
+.Myfooter{
+    background-color: #171a1d ;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    color: whitesmoke;
+
+}
+
+#footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;   
+}
+
+#footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 5rem;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    padding-left: 0;
+}
+
+.socials li{
+    margin: 0 1.2rem;
+}
+
+.socials a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.socials a i{
+    font-size: 2rem;
+    transition: color 0.3s ease,
+                transform 0.3s ease-in;
+}
+
+.socials a:hover i{
+    color: #198754;
+    transform: translateY(-3px);
 }

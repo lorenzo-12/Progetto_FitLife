@@ -1,5 +1,15 @@
 @import "../Home/navbarStyle.css";
+body{
+    padding-top: 76px;
+    background-color:#212529 ;
+    color: whitesmoke;
+}
 
+.Mylogo {
+    cursor: pointer;
+    height:50px;
+    width: 75px;
+}
 
 header{
     z-index: 10;
@@ -52,6 +62,7 @@ header{
     .pasta img, .frutta img{
     width: 100%;    
     display: block;
+    
 }
 
 .row{
@@ -84,7 +95,8 @@ header{
 .layer h3, .layer2 h3, .layer3 h3, .layer4 h3{
     width: 100%;
     font-weight: 500;
-    color: #000;
+    /* color: #000; */
+    color:whitesmoke;
     font-size: 26;
     bottom: 0;
     left: 50%;

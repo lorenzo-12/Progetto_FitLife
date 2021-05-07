@@ -3,8 +3,13 @@
     <head>
         <!--Questo meta qua sotto serve per il mobile layout-->
         <meta charset="utf-8">
-        <meta name="viewport" content="with-device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Scheda</title>
+        <!--Icone-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+          crossorigin="anonymous" />
+        <!--Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
             rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" 
             crossorigin="anonymous">
@@ -25,7 +30,7 @@
                     <a class="nav-link" href="../Home/test.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Chi siamo</a>
+                    <a class="nav-link" href="../Home/test.html#chisiamoAnchor">Chi siamo</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./Scheda.html">Scheda</a>
@@ -50,7 +55,48 @@
               </div>
             </div>
           </nav>
+          <!--Img tizio per muscoli-->
+          <div id="muscle-container" class="container-lg">
+            <div id="icon-div" class="container-sm">
+              <ul class="coppiaIcone">
+                <li><a href="#"><i id="man-icon" class="fas fa-male"></i></a></li>
+                <li><a href="#"><i id="woman-icon" class="fas fa-female"></i></a></li>
+              </ul>
+            </div>
+            <div id="man-container" class="container-fluid">
+              <div id="btnsx">
+                <button class="btn btn-lg btn-outline-success">PETTO</button>
+                <button class="btn btn-lg btn-outline-success">ADDOME</button>
+                <button class="btn btn-lg btn-outline-success">GAMBE</button>
+              </div>
+              <img id="man-img" src="../Home/Images/muscleMan.png" class="img-fluid">
+              <div id="btndx">
+                <button class="btn btn-lg btn-outline-success">BICIPITI</button>
+                <button class="btn btn-lg btn-outline-success">SCHIENA</button>
+                <button class="btn btn-lg btn-outline-success">TRICIPITI</button>
+              </div>
+            </div>
+            <div id="woman-container"> <!--da trovare img per donna-->
+              <img src="../Home/Images/muscleWomanp.png" class="img-fluid">
+            </div>
+          </div>
+          <!--FOOTER-->
+          <footer class="Myfooter">
+            <div id="footer-content" class="container-fluid">
+              <h3>Contatti</h3>
+              <ul class="socials">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+          
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" 
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+          </script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+          </script>
+          <script src="SchedaJS.js"></script>
     </body>
