@@ -34,9 +34,9 @@
 
 
 .collapse_carne, .collapse_pesce{
-    width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-around;
+
 } 
 
 #CARNE:hover #ca1, #PESCE:hover #pe1, #PASTA:hover #pa1, #FRUTTA:hover #fr1{
@@ -44,14 +44,24 @@
     transition: 0.5s;
 }
 
+
+
+.card_carne{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+}
+
 .card{
     display: flex;
     align-items:center;
-    width: fit-content;
-    margin: 2%;
+    text-align: center;
+    width: 18vw;
     background: transparent;
     transition: background-color 0.3s ease-in,
     transform 0.3s ease-in;
+    border: none;
 }
 
 
@@ -60,15 +70,66 @@
     transform: translateY(-3px);
 }
 
+.bottoni{
+    text-align: center;
+}
+
+.form-control{
+    border: transparent;
+    background: transparent;
+    width: 3em;
+    text-align: center; 
+}
+#bottoni{
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    padding: 1em 1em;
+    transition-duration: 0.5s;
+}
+
+#bottoni:hover, #bottoni:hover{
+    background-color: #0c25b4;
+    border-color: #0c25b4;
+    /* color: #212529; */
+    color: white;
+}
 
 
-@media screen and (max-width: 767px){
+
+
+@media screen and (max-width: 1200px){
     #cont{
-        /* display: flex;
-        justify-self: center; */
+        display: flex;
+        justify-self: center;
     }
     .alimenti{
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #CARNE, #PESCE, #PASTA, #FRUTTA{
+        width: 47vw;
+    }
+
+    .collapse_carne, .collapse_pesce{
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card{
+        width: 24vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    #cont{
+        display: flex;
+        justify-self: center;
+    }
+    .alimenti{
+        flex-wrap: wrap;
         justify-content: space-around;
     }
     #CARNE, #PESCE, #PASTA, #FRUTTA{
@@ -76,10 +137,39 @@
     }
 
     .collapse_carne, .collapse_pesce{
-        display: inline-block;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    #card_carne,#card_pesce{
-        width: 23%;
+    .card{
+        width: 40vw;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 767px){
+    #cont{
+        display: flex;
+        justify-self: center;
+    }
+    .alimenti{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #CARNE, #PESCE, #PASTA, #FRUTTA{
+        width: fit-content;
+    }
+
+    .collapse_carne, .collapse_pesce{
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card{
+        width: 45vw;
     }
 
 
@@ -87,11 +177,11 @@
 
 @media screen and (max-width: 550px){
     #cont{
-        /* display: flex;
-        justify-self: center; */
+        display: flex;
+        justify-self: center;
     }
     .alimenti{
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
     #CARNE, #PESCE, #PASTA, #FRUTTA{
@@ -99,10 +189,12 @@
     }
 
     .collapse_carne, .collapse_pesce{
-        display: inline-block;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    #card_carne,#card_pesce{
-        width: 23%;
+    .card{
+        width: 47vw;
     }
 
 }
