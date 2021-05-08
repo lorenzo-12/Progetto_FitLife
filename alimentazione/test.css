@@ -1,195 +1,30 @@
-@import "../Home/navbarStyle.css";
-body{
-    padding-top: 76px;
-    background-color:#212529 ;
-    color: whitesmoke;
-}
 
-.Mylogo {
-    cursor: pointer;
-    height:50px;
-    width: 75px;
-}
 
-header{
-    z-index: 10;
-    background-color: #979797;
-}
 
-.wrapper{
-    width: 90%;
-    margin: 5%;
-    text-align: center;
-    margin-top: 0;
-}
-
-/* --- immagini alimenti --- */
-
-.carne{
-    flex-basis: 22%;
-    border-radius: 10px;
+#bottoni{
+    display: flex;
+    justify-content: center;
+    background: none;
+    background-color:transparent;
+    border-color: #212529; 
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    padding: 1em 1em;
+    transition-duration: 0.5s;
     position: relative;
-    overflow: hidden;
-    padding: 0px;
-    margin: 2%;
-}
-.pesce{
-    flex-basis: 22%;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    padding: 0px;
-    margin: 2%;
-}
-.pasta{
-    flex-basis: 22%;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    padding: 0px;
-    margin: 2%;
-}
-.frutta{
-    flex-basis: 22%;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    padding: 0px;
-    margin: 2%;
-}
-
-.carne img, .pesce img, 
-    .pasta img, .frutta img{
-    width: 100%;    
-    display: block;
-    
-}
-
-.row{
-    display: inline-flex;
-}
-
-.layer, .layer2, .layer3, .layer4{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s; 
-}
-
-.layer:hover{
-    background: rgba(226, 0, 0, 0.5); 
-}
-.layer2:hover{
-    background: rgba(0, 0, 226, 0.5); 
-}
-.layer4:hover{
-    background: rgba(0, 226, 0, 0.5);
-}
-.layer3:hover{
-    background: rgba(246, 113, 3, 0.5);
-}
-
-.layer h3, .layer2 h3, .layer3 h3, .layer4 h3{
-    width: 100%;
-    font-weight: 500;
-    /* color: #000; */
-    color:whitesmoke;
-    font-size: 26;
-    bottom: 0;
+    top: 100px;
     left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
 }
 
-.layer:hover h3, .layer2:hover h3, 
-    .layer3:hover h3, .layer4:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-@media screen and (max-width:835px){
-    .row{
-        display: block;
-    }
-    .carne{
-        width: 50%;
-        left: 25%;
-    }
-    .pesce{
-        width: 50%;
-        left: 25%;
-        margin-top: 5%;
-    }
-    .pasta{
-        width: 50%;
-        left: 25%;
-        margin-top: 5%;
-    }
-    .frutta{
-        width: 50%;
-        left: 25%;
-        margin-top: 5%;
-    }
+#bottoni:focus{
+    border-color: green;
+    box-shadow: none;
 }
 
 
-/* --- alimenti --- */
-
-.alimenti{
-    width: 100%;
-    margin-bottom: 3%;
-    text-align: center;
-    flex-direction: column;
+#bottoni:hover, #bottoni:hover{
+    background-color: #d40e0ed0;
+    border-color:transparent;
+    color: #212529;
 }
-
-.alimenti-carne{
-    display: inline-flex;
-    visibility: hidden;
-    position: absolute;
-    justify-content: space-evenly;
-}
-.carne1, .pesce1{
-    display: inline-flex;
-    margin-right: 3%;
-    /* margin-right: 10%; */
-}
-
-.sc1{
-    /* margin-left: 2%; */
-    width: max-content;
-    flex: auto;
-}
-
-.alimenti-pesce{
-    display: inline-flex;
-    visibility: hidden;
-    position: relative;
-    justify-content: space-evenly;
-}
-
-
-
-@media screen and (max-width:835px){
-    .alimenti-carne{
-        display: block;
-    }
-    .alimenti-pesce{
-        display: block;
-    }
-    .carne1{
-        width: 50%;
-        left: 25%;
-        margin-top: 5%;
-    }
-    .pesce1{
-        width: 50%;
-        left: 25%;
-    }
-}
-
-
