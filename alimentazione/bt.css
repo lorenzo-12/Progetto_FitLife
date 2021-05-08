@@ -33,11 +33,10 @@
 
 
 
-#collapse_carne, #collapse_pesce{
+.collapse_carne, .collapse_pesce{
     width: 100%;
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-around;
 } 
 
 #CARNE:hover #ca1, #PESCE:hover #pe1, #PASTA:hover #pa1, #FRUTTA:hover #fr1{
@@ -45,30 +44,28 @@
     transition: 0.5s;
 }
 
-#card_ca1, #card_ca2, #card_ca3,#card_ca4{
+.card{
+    display: flex;
+    align-items:center;
+    width: fit-content;
     margin: 2%;
-}
-#card_pe1, #card_pe2, #card_pe3,#card_pe4{
-    margin: 2%;
+    background: transparent;
+    transition: background-color 0.3s ease-in,
+    transform 0.3s ease-in;
 }
 
-#card_ca1:hover, #card_ca2:hover, #card_ca3:hover, #card_ca4:hover{
-    /* background:rgb(13, 82, 211); */
-    background: linear-gradient(45deg, #07ebdf,#060af5);
-    transition: 1s;
+
+#ca:hover,#pe:hover{
+    background-color: #198754;
+    transform: translateY(-3px);
 }
 
-#card_pe1:hover, #card_pe2:hover, #card_pe3:hover, #card_pe4:hover{
-    /* background:lawngreen; */
-    background: linear-gradient(45deg, #a2f803,#04fb4e);
-    transition: 1s;
-}
 
 
 @media screen and (max-width: 767px){
     #cont{
-        display: flex;
-        justify-self: center;
+        /* display: flex;
+        justify-self: center; */
     }
     .alimenti{
         flex-direction: column;
@@ -78,14 +75,11 @@
         width: fit-content;
     }
 
-     #collapse_carne, #collapse_pesce{
+    .collapse_carne, .collapse_pesce{
         display: inline-block;
     }
-    #card_ca1, #card_ca2, #card_ca3,#card_ca4{
-        width: fit-content;
-    }
-    #card_pe1, #card_pe2, #card_pe3,#card_pe4{
-        width: fit-content;
+    #card_carne,#card_pesce{
+        width: 23%;
     }
 
 
@@ -93,8 +87,8 @@
 
 @media screen and (max-width: 550px){
     #cont{
-        display: flex;
-        justify-self: center;
+        /* display: flex;
+        justify-self: center; */
     }
     .alimenti{
         flex-direction: column;
@@ -104,14 +98,11 @@
         width: fit-content;
     }
 
-    #collapse_carne, #collapse_pesce{
+    .collapse_carne, .collapse_pesce{
         display: inline-block;
     }
-    #card_ca1, #card_ca2, #card_ca3,#card_ca4{
-        width: fit-content;
-    }
-    #card_pe1, #card_pe2, #card_pe3,#card_pe4{
-        width: fit-content;
+    #card_carne,#card_pesce{
+        width: 23%;
     }
 
 }
