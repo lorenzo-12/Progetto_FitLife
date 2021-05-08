@@ -15,30 +15,34 @@
 }
 
 #CARNE{
-    background: rgba(13, 13, 236, 1);
+    background: linear-gradient(45deg, #07ebdf,#060af5);
     margin: 0.5%;
 }
 #PESCE{
-    background: rgba(17, 236, 17, 1);
+    background: linear-gradient(45deg, #a2f803,#04fb4e);
     margin: 0.5%;
 }
 #PASTA{
-    background: rgba(231, 17, 17, 1);
+    background: linear-gradient(45deg, #c6e902,#fb0404);
     margin: 0.5%;
 }
 #FRUTTA{
-    background: rgba(240, 240, 8, 1);
+    background: linear-gradient(45deg, #f80303,#fb04e6);
     margin: 0.5%;
 }
 
+
+
+#collapse_carne, #collapse_pesce{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+} 
 
 #CARNE:hover #ca1, #PESCE:hover #pe1, #PASTA:hover #pa1, #FRUTTA:hover #fr1{
     opacity: 0.5;
     transition: 0.5s;
-}
-
-#collapse_carne, #collapse_pesce{
-    width: 100%;
 }
 
 #card_ca1, #card_ca2, #card_ca3,#card_ca4{
@@ -46,6 +50,18 @@
 }
 #card_pe1, #card_pe2, #card_pe3,#card_pe4{
     margin: 2%;
+}
+
+#card_ca1:hover, #card_ca2:hover, #card_ca3:hover, #card_ca4:hover{
+    /* background:rgb(13, 82, 211); */
+    background: linear-gradient(45deg, #07ebdf,#060af5);
+    transition: 1s;
+}
+
+#card_pe1:hover, #card_pe2:hover, #card_pe3:hover, #card_pe4:hover{
+    /* background:lawngreen; */
+    background: linear-gradient(45deg, #a2f803,#04fb4e);
+    transition: 1s;
 }
 
 
@@ -62,8 +78,8 @@
         width: fit-content;
     }
 
-    #collapse_carne, #collapse_pesce{
-        flex-direction: column;
+     #collapse_carne, #collapse_pesce{
+        display: inline-block;
     }
     #card_ca1, #card_ca2, #card_ca3,#card_ca4{
         width: fit-content;
@@ -71,6 +87,7 @@
     #card_pe1, #card_pe2, #card_pe3,#card_pe4{
         width: fit-content;
     }
+
 
 }
 
@@ -88,8 +105,7 @@
     }
 
     #collapse_carne, #collapse_pesce{
-        flex-direction: column;
-        width: fit-content;
+        display: inline-block;
     }
     #card_ca1, #card_ca2, #card_ca3,#card_ca4{
         width: fit-content;
