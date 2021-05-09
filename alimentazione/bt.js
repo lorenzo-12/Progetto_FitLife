@@ -36,7 +36,7 @@ function conta(){
     var tmp_prot = 0;
     var tmp_cal = 0;
     var tmp_carb = 0;
-    $("ul").empty();
+    $("#alimenti_lista").empty();
     for(var i=0; i<a.length; i++){
         if(a[i].value=="") a[i].value=0;
         tmp_prot = parseInt(tmp_prot)+parseFloat(a[i].value)*parseInt(le[i].p);
@@ -45,7 +45,7 @@ function conta(){
         if(a[i].value>0){
             var aux = 0;
             aux = parseFloat(a[i].value)*100
-            if(a[i].value>0) $("ul").append($("<li class='list-group-item' id='li_item'>").html(le[i].nome));
+            if(a[i].value>0) $("#alimenti_lista").append($("<li class='list-group-item' id='li_item'>").html(le[i].nome));
         }
     }
     sum_prot.innerHTML="PROTEINE: "+tmp_prot;
