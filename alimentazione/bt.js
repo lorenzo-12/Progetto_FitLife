@@ -27,7 +27,8 @@ le[12]=frutta1; le[13]=frutta2; le[14]=frutta3; le[15]=frutta4;
 var sum_prot = document.getElementById("sum_prot");
 var sum_cal = document.getElementById("sum_cal");
 var sum_carb = document.getElementById("sum_carb");
-var sum_ali = document.getElementById("alsel");
+//var sum_ali = document.getElementById("alsel");
+
 
 
 function conta(){
@@ -35,7 +36,7 @@ function conta(){
     var tmp_prot = 0;
     var tmp_cal = 0;
     var tmp_carb = 0;
-    var string = "";
+    $("ul").empty();
     for(var i=0; i<a.length; i++){
         if(a[i].value=="") a[i].value=0;
         tmp_prot = parseInt(tmp_prot)+parseFloat(a[i].value)*parseInt(le[i].p);
@@ -44,13 +45,14 @@ function conta(){
         if(a[i].value>0){
             var aux = 0;
             aux = parseFloat(a[i].value)*100
-            string = string+" "+ le[i].nome+"("+aux+"g) ";
+            if(a[i].value>0) $("ul").append($("<li class='list-group-item' id='li_item'>").html(le[i].nome));
         }
     }
     sum_prot.innerHTML="PROTEINE: "+tmp_prot;
     sum_cal.innerHTML="CARBOIDRATI: "+tmp_carb;
     sum_carb.innerHTML="CALORIE: "+tmp_cal;
-    sum_ali.innerHTML="ALIMENTI SELEZIONATI: "+string;
+    // sum_ali.innerHTML="ALIMENTI SELEZIONATI: "+string;
+
 
 }
 

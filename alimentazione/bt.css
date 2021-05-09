@@ -151,11 +151,44 @@
     height: 10000%;
   }
 
-#alsel{
-    width: fit-content;
+/* #alsel{
+    width: auto;
     text-align: center;
-    min-width: 20vw;
+} */
+
+#alimenti_lista{
+    display: inline-block;
+    flex-wrap: wrap;
+    
 }
+
+#alimenti_lista{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#li_item{
+    border-color: #198754;
+    background-color: transparent; 
+    /* float: left; */
+    justify-content: center;
+    flex-direction: row;
+    color: #198754;
+}
+.testo{
+    display: inline-flex;
+    width: 100vw;
+    justify-content: center;
+}
+#testo_lista{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    color: #198754;
+}
+
+
 
 
 
