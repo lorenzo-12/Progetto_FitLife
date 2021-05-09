@@ -104,6 +104,59 @@
     box-shadow: none;
 }
 
+.container_valori{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container_alsel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn3{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #198754;
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #198754;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    width: 20vw;
+}
+
+  .btn3::before{
+    background: #198754;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: all 2s ease;
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .btn3:hover::before{
+    height: 10000%;
+  }
+
+#alsel{
+    width: fit-content;
+    text-align: center;
+    min-width: 20vw;
+}
+
 
 
 @media screen and (max-width: 1200px){
@@ -128,6 +181,13 @@
     .card{
         width: 24vw;
     }
+    .btn3{
+        width: 30vw;
+    }
+    #alsel{
+        width: 100vw;
+    }
+
 
 }
 
@@ -152,6 +212,9 @@
     }
     .card{
         width: 40vw;
+    }
+    .btn3{
+        width: 30vw;
     }
 
 }
@@ -183,6 +246,7 @@
     }
 
 
+
 }
 
 @media screen and (max-width: 550px){
@@ -207,5 +271,6 @@
     .card{
         width: 47vw;
     }
+
 
 }
