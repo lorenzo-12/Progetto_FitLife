@@ -36,3 +36,50 @@ function imgSwitch(){ //funzione per switchare da una img all'altra relativament
 }
 
 imgSwitch();
+
+//Serve per collegare il click sul btn-muscolo al suo accordion item
+
+function showAccordionItem(accordionItemString){
+    accordionItemString = "[name='"+accordionItemString+"']";
+    const accordionString = accordionItemString + " > h2 > button";
+
+    if($("#accordion-container").css("display")!="block"){
+        $("#accordion-container").css("display","block");
+        $("#scheda").css("display","flex");
+    }
+
+    if($(accordionString).attr("aria-expanded")=="false"){
+    // if(btn.name!="btn-petto"){
+        
+        $(accordionString).attr("aria-expanded","true");
+        $(accordionString).removeClass("collapsed");
+        $(accordionItemString+" > .accordion-collapse").addClass("show");
+        //funzione per scrollare
+        document.querySelector(accordionItemString).scrollIntoView({
+            behavior: 'smooth'
+        });
+        
+    }
+
+    else{
+        $(accordionString).addClass("collapsed");
+        $(accordionString).attr("aria-expanded","false");
+        $(accordionItemString+" > .accordion-collapse").removeClass("show");
+    }
+        
+
+}
+
+//Codice per aggiungere esercizi alla scheda quando checkati
+function addExcercise(checkbox,esercizio,nserie){
+    const serie = esercizio + "serie";
+    if(checkbox.checked){
+        $("#lista-esercizi").append('<li id="'+esercizio+'"><h4>'+esercizio+'</h4></li>');
+        $("#lista-serie").append('<li id="'+serie+'"><h4>'+nserie+'</h4></li>');
+    }
+    else{
+        $("#"+esercizio).remove();
+        $("#"+serie).remove();
+
+    }
+}
