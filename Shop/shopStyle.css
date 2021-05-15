@@ -1,3 +1,11 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond;
+}
+
 body{
     padding-top: 76px;
     background-color:#212529 ;
@@ -7,4 +15,111 @@ body{
     cursor: pointer;
     height:50px;
     width: 75px;
+}
+
+.container-shop {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.image {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-cart {
+    position: absolute;
+    width: 100%;
+    background-color: darkgrey;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.image:hover .cart1,
+.image:hover .cart2 {
+    bottom: 82px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* -------------------------- PAGINA CARRELLO -----------------------*/
+
+.products-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.products-container ion-icon {
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.product-header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+}
+
+.price {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.products {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 75px;
+    height: 75px;
+}
+
+.baskettotal {
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
 }
