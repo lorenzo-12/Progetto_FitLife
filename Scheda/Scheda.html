@@ -64,32 +64,172 @@
               </ul>
             </div>
             <div id="man-container" class="container-fluid">
-              <div id="btnsx">
-                <button class="btn btn-lg btn-outline-success">PETTO</button>
-                <button class="btn btn-lg btn-outline-success">ADDOME</button>
-                <button class="btn btn-lg btn-outline-success">GAMBE</button>
+              <div class="btnsx">
+                <button name="btn-petto" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-petto')">PETTO</button>
+                <button name="btn-addome" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-addome')">ADDOME</button>
+                <button name="btn-gambe" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-gambe')">GAMBE</button>
               </div>
-              <img id="man-img" src="../Home/Images/muscleMan.png" class="img-fluid">
-              <div id="btndx">
-                <button class="btn btn-lg btn-outline-success">BICIPITI</button>
-                <button class="btn btn-lg btn-outline-success">SCHIENA</button>
-                <button class="btn btn-lg btn-outline-success">TRICIPITI</button>
+              <img id="man-img" src="../Home/Images/man1.png" class="img-fluid">
+              <div class="btndx">
+                <button name="btn-bicipiti" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-bicipiti')">BICIPITI</button>
+                <button name="btn-schiena" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-schiena')">SCHIENA</button>
+                <button name="btn-tricipiti" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-tricipiti')">TRICIPITI</button>
               </div>
             </div>
             <div id="woman-container"> <!--da trovare img per donna-->
-              <div id="btnsx">
-                <button class="btn btn-lg btn-outline-success">PETTO</button>
-                <button class="btn btn-lg btn-outline-success">ADDOME</button>
-                <button class="btn btn-lg btn-outline-success">GAMBE</button>
+              <div class="btnsx">
+                <button name="btn-petto" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-petto')">PETTO</button>
+                <button name="btn-addome" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-addome')">ADDOME</button>
+                <button name="btn-gambe" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-gambe')">GAMBE</button>
               </div>
-              <img src="../Home/Images/muscleWomanp.png" class="img-fluid">
-              <div id="btndx">
-                <button class="btn btn-lg btn-outline-success">BICIPITI</button>
-                <button class="btn btn-lg btn-outline-success">SCHIENA</button>
-                <button class="btn btn-lg btn-outline-success">TRICIPITI</button>
+              <img src="../Home/Images/woman1.png" class="img-fluid">
+              <div class="btndx">
+                <button name="btn-bicipiti" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-bicipiti')">BICIPITI</button>
+                <button name="btn-schiena" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-schiena')">SCHIENA</button>
+                <button name="btn-tricipiti" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-tricipiti')">TRICIPITI</button>
               </div>
             </div>
           </div>
+          <!--ACCORDION PER VIDEO-->
+          <div id="accordion-container" class="container-sm">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div name="accordion-petto" id="myaccordion-item" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button id="myaccordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                    Accordion PETTO
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+                    <div id="iframe-container" class="row" >
+                      <div id="c1" class="col-sm-auto">
+                        <h5 class="text-light">Esercizio 1</h5>
+                        <iframe class="yt-video" src="https://www.youtube.com/embed/1S5gLPWF0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div id="c2" class="col-sm">
+                        <h2 class="text-light">10 X 4</h2>
+                      </div>
+                      <div id="c3" class="col-sm">
+                        <input id="video-check" class="form-check-input" type="checkbox" value="" onclick="addExcercise(this,'Esercizio1','10x4')">
+                      </div>
+                    </div>
+                    <div id="iframe-container" class="row" >
+                      <div id="c1" class="col-sm-auto">
+                        <h5 class="text-light">Esercizio 2</h5>
+                        <iframe class="yt-video" src="https://www.youtube.com/embed/1S5gLPWF0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div id="c2" class="col-sm">
+                        <h2 class="text-light">10 X 4</h2>
+                      </div>
+                      <div id="c3" class="col-sm">
+                        <input id="video-check" class="form-check-input" type="checkbox" value="" onclick="addExcercise(this,'Esercizio2','10x4')">
+                      </div>
+                    </div>
+                    <div id="iframe-container" class="row" >
+                      <div id="c1" class="col-sm-auto">
+                        <h5 class="text-light">Esercizio 3</h5>
+                        <iframe class="yt-video" src="https://www.youtube.com/embed/1S5gLPWF0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div id="c2" class="col-sm">
+                        <h2 class="text-light">10 X 4</h2>
+                      </div>
+                      <div id="c3" class="col-sm">
+                        <input id="video-check" class="form-check-input" type="checkbox" value="" onclick="addExcercise(this,'Esercizio3','10x4')">
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div name="accordion-addome" id="myaccordion-item" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button id="myaccordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Accordion ADDOME
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div name="accordion-gambe" id="myaccordion-item" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button id="myaccordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Accordion GAMBE
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div name="accordion-bicipiti" id="myaccordion-item" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                  <button id="myaccordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    Accordion BICIPITI
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div name="accordion-tricipiti" id="myaccordion-item" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                  <button id="myaccordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                    Accordion TRICIPITI
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div name="accordion-schiena" id="myaccordion-item" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                  <button id="myaccordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                    Accordion SCHIENA
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+          <!-- LISTA ESERCIZI -->
+          <div id="container-scheda" class="container-sm">
+            <div id="scheda" class="row">
+              <div id="colEs" class="col-sm">
+                <h2>Esercizi</h2>
+              </div>
+              <div id="colSer" class="col-sm">
+                <h2>Reps X Serie</h2>
+              </div>
+              <div class="w-100"></div>
+              <div id="colEl1" class="col-sm">
+                <ul id="lista-esercizi">
+                </ul>
+              </div>
+              <div id="colEl2" class="col-sm">
+                <ul id="lista-serie">
+                </ul>
+              </div>
+              <!-- <div id="btn-delete" class="col-sm">
+                <button class="btn btn-outline-danger">Delete</button>
+              </div> -->
+            </div>
+          </div>
+          
           <!--FOOTER-->
           <footer class="Myfooter">
             <div id="footer-content" class="container-fluid">
