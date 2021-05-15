@@ -1,22 +1,23 @@
-var carne1 = {p: "10",c: "20",cb: "30",g:"40", nome: "carne1"}
-var carne2 = {p: "10",c: "20",cb: "30",g:"40", nome: "carne2"}
-var carne3 = {p: "10",c: "20",cb: "30",g:"40", nome: "carne3"}
-var carne4 = {p: "10",c: "20",cb: "30",g:"40", nome: "carne4"}
+var carne1 = {p: "25",c: "271",cb: "0",g:"19", nome: "bistecca"}
+var carne2 = {p: "31",c: "165",cb: "0",g:"4", nome: "pollo"}
+var carne3 = {p: "29",c: "130",cb: "0",g:"1", nome: "tonno"}
+var carne4 = {p: "18",c: "175",cb: "8",g:"7", nome: "salmone"}
 
-var pesce1 = {p: "10",c: "20",cb: "30",g:"40", nome: "pesce1"}
-var pesce2 = {p: "10",c: "20",cb: "30",g:"40", nome: "pesce2"}
-var pesce3 = {p: "10",c: "20",cb: "30",g:"40", nome: "pesce3"}
-var pesce4 = {p: "10",c: "20",cb: "30",g:"40", nome: "pesce4"}
+var pesce1 = {p: "25",c: "402",cb: "1",g:"33", nome: "formaggio"}
+var pesce2 = {p: "1",c: "359",cb: "83",g:"3", nome: "frutta secca"}
+var pesce3 = {p: "5",c: "546",cb: "61",g:"31", nome: "cioccolata"}
+var pesce4 = {p: "2",c: "160",cb: "9",g:"15", nome: "avocado"}
 
-var farina1 = {p: "10",c: "20",cb: "30",g:"40", nome: "farina1"}
-var farina2 = {p: "10",c: "20",cb: "30",g:"40", nome: "farina2"}
-var farina3 = {p: "10",c: "20",cb: "30",g:"40", nome: "farina3"}
-var farina4 = {p: "10",c: "20",cb: "30",g:"40", nome: "farina4"}
+var farina1 = {p: "5",c: "131",cb: "25",g:"1", nome: "pasta"}
+var farina2 = {p: "9",c: "130",cb: "28",g:"1", nome: "pane"}
+var farina3 = {p: "6",c: "378",cb: "87",g:"1", nome: "cereali"}
+var farina4 = {p: "3",c: "265",cb: "49",g:"0", nome: "riso"}
 
-var frutta1 = {p: "10",c: "20",cb: "30",g:"40", nome: "frutta1"}
-var frutta2 = {p: "10",c: "20",cb: "30",g:"40", nome: "frutta2"}
-var frutta3 = {p: "10",c: "20",cb: "30",g:"40", nome: "frutta3"}
-var frutta4 = {p: "10",c: "20",cb: "30",g:"40", nome: "frutta4"}
+var frutta1 = {p: "2",c: "15",cb: "3",g:"0", nome: "insalata"}
+var frutta2 = {p: "1",c: "89",cb: "23",g:"0", nome: "banana"}
+var frutta3= {p: "1",c: "1",cb: "17",g:"0", nome: "zucchine"}
+var frutta4 = {p: "1",c: "17",cb: "4",g:"0", nome: "pomodori"}
+
 
 var le = new Array();
 le[0]=carne1; le[1]=carne2; le[2]=carne3; le[3]=carne4;
@@ -52,8 +53,8 @@ function conta(){
         }
     }
     sum_prot.innerHTML="PROTEINE: "+tmp_prot;
-    sum_cal.innerHTML="CARBOIDRATI: "+tmp_carb;
-    sum_carb.innerHTML="CALORIE: "+tmp_cal;
+    sum_cal.innerHTML="CALORIE: "+tmp_carb;
+    sum_carb.innerHTML="CARBOIDRATI: "+tmp_cal;
     sum_gra.innerHTML="GRASSI: "+tmp_gra;
 
 

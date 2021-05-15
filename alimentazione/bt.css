@@ -32,13 +32,14 @@
     margin: 0.5%;
 }
 
-
+#contcollapse{
+    padding: 0;
+}
 
 .collapse_carne, .collapse_pesce, 
 .collapse_farina, .collapse_frutta{
     display: none;
     justify-content: space-around;
-
 } 
 
 #CARNE:hover #ca1, #PESCE:hover #pe1, 
@@ -60,7 +61,7 @@
     display: flex;
     align-items:center;
     text-align: center;
-    width: 18vw;
+    width: 17vw;
     height: 100%    ;
     background: transparent;
     transition: background-color 0.3s ease-in,
