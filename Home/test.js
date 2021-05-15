@@ -6,10 +6,10 @@ function serviziClick(){ //funzione per reindirizzare alle rispettive pagine ind
         //  document.location.href.split('/')[0]+"/Scheda/Scheda.html";
      });
      $("#servAlim").on("click", () => {
-        document.location.href = "../alimentazione/test.html"
+        document.location.href = "../alimentazione/bt.html"
     });
     $("#servShop").on("click", () => {
-        document.location.href = "../Shop/Shop.html"
+        document.location.href = "../Shop/index.html"
     });
 }
 
