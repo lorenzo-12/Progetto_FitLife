@@ -1,0 +1,141 @@
+body{
+    padding-top: 12vh;
+    color: whitesmoke;
+    background-color: #212529;
+}
+
+.Mylogo {
+    cursor: pointer;
+    height:50px;
+    width: 75px;
+}
+
+#form-box{
+    width: 40vw;
+    min-height: 50vh;
+    background: #1a1d20;
+    padding: 5px;
+    /* overflow: hidden; */
+}
+
+#button-box{
+    width: 90%;
+    position: relative;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px 9px #24ff531f;
+    border-radius: 25px;
+}
+
+#btnBack{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #198754, #738719); /*#ff105f, #ffad06*/
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.toggle-btn{
+    color: whitesmoke;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#login-form{
+    display: flex;
+}
+
+#input-container{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#input-email, #input-psw, #input-username{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #738719;
+}
+
+#submit-btn{
+    border-radius: 25px;
+    background: linear-gradient(to right, #198754, #738719);
+    outline: none;
+    border: 0;
+}
+
+#register-form{
+    display: none;
+}
+
+@media screen and (max-width:460px) {
+    #form-box{
+        width: 100%;
+        min-width: 200px;
+    }
+}
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+
+.Myfooter{
+    background-color: #171a1d ;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    color: whitesmoke;
+    bottom: 0;
+    position: relative;
+}
+
+#footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;   
+}
+
+#footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 5rem;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    padding-left: 0;
+}
+
+.socials li{
+    margin: 0 1.2rem;
+}
+
+.socials a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.socials a i{
+    font-size: 2rem;
+    transition: color 0.3s ease,
+                transform 0.3s ease-in;
+}
+
+.socials a:hover i{
+    color: #198754;
+    transform: translateY(-3px);
+}
