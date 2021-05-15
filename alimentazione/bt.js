@@ -54,7 +54,7 @@ function conta(){
     }
     sum_prot.innerHTML="PROTEINE: "+tmp_prot;
     sum_cal.innerHTML="CALORIE: "+tmp_carb;
-    sum_carb.innerHTML="CARBOIDRATI: "+tmp_cal;
+    sum_carb.innerHTML="CARBOIDRATIF: "+tmp_cal;
     sum_gra.innerHTML="GRASSI: "+tmp_gra;
 
 

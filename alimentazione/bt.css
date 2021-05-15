@@ -97,9 +97,9 @@
 }
 
 #bottoni:hover, #bottoni:hover{
-    background-color: #d40e0ed0;
+    background-color: #030303b2;
     border-color:transparent;
-    color: #212529;
+    color: #ffffff;
 }
 
 #bottoni:focus{
