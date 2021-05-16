@@ -1,5 +1,16 @@
 @import "../Home/styleTest.css";
 
+body{
+    padding-top: 76px;
+    background-color:#212529 ;
+}
+
+.Mylogo {
+    cursor: pointer;
+    height:50px;
+    width: 75px;
+}
+
 
 #cont{
     flex-wrap: wrap;
@@ -153,10 +164,10 @@
     height: 10000%;
   }
 
-/* #alsel{
+#alsel{
     width: auto;
     text-align: center;
-} */
+}
 
 #alimenti_lista{
     display: inline-block;
