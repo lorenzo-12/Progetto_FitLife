@@ -57,14 +57,14 @@
         </div>
         <!-- LOGIN FORM -->
         <div id="form-container" class="container-sm">
-            <form id="login-form">
+            <form action="login.php" method="POST" id="login-form">
                 <div id="input-container" class="container-sm">
                     <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
                     <div class="input-group mb-4">
-                        <input id="input-email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        <input id="input-email" name="inputemail" type="email" class="form-control" placeholder="Email" aria-label="Email">
                     </div>
                     <div class="input-group mb-4">
-                        <input id="input-psw" type="password" class="form-control" placeholder="Password" aria-label="Password">
+                        <input id="input-psw" name="inputpassword" type="password" class="form-control" placeholder="Password" aria-label="Password">
                     </div>
                     <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
