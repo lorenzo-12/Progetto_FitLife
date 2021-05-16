@@ -195,6 +195,7 @@ body{
 .accordion-body{
     display: inline-flex;
     flex-direction: column;
+    width: 100%;
 }
 /* iframe video */
 /* iframe video */
