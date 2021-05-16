@@ -3,13 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: blanchedalmond;
+    color: whitesmoke;
 }
 
 body{
     padding-top: 76px;
     background-color:#212529 ;
 }
+
+/*#offcanvasRight {
+    width: 80%;
+    background-color: whitesmoke;
+}*/
 
 .Mylogo {
     cursor: pointer;
@@ -23,19 +28,28 @@ body{
     flex-wrap: wrap;
     margin-top: 50px;
     padding-bottom: 100px;
+    width: 50%;
+    margin-left: 25%;
 }
 
 .image {
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
+}
+
+.prod {
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
 }
 
 .add-cart {
     position: absolute;
     width: 100%;
-    background-color: darkgrey;
+    background-color: lightslategray;
     transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
@@ -43,13 +57,24 @@ body{
 }
 
 .image:hover .cart1,
-.image:hover .cart2 {
-    bottom: 82px;
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4,
+.image:hover .cart5,
+.image:hover .cart6,
+.image:hover .cart7,
+.image:hover .cart8,
+.image:hover .cart9 {
+    bottom: 22%;
     opacity: 1;
     padding: 10px;
     text-decoration: none;
 }
 
+h3{
+    margin-top: 2%;
+    font-size: 15px;
+}
 /* -------------------------- PAGINA CARRELLO -----------------------*/
 
 .products-container {
@@ -61,7 +86,7 @@ body{
 
 .products-container ion-icon {
     font-size: 25px;
-    color: white;
+    color:white;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -101,7 +126,7 @@ body{
 .product {
     width: 45%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 10px 10px;
     align-items: center;
 }
@@ -122,4 +147,8 @@ body{
     justify-content: flex-end;
     width: 100%;
     padding: 10px 0;
+}
+
+.image11 {
+    margin-right: 2%;
 }
