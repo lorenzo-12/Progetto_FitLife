@@ -5,36 +5,43 @@
         
 
         <?php 
-
-
-
             $dbconn = pg_connect("host=localhost
                                 port=5432
                                 dbname=ltw
                                 user=postgres
                                 password=lollo")
-            or die('cuold nnot connect' . pg_last_error() );
+            or die('could not connect' . pg_last_error() );
 
-            
 
-            // $email = $_POST['inputemail'];
-            // $password = $_POST['inputpassword'];
-            $email = 'l@gmail.com';
-            $password = 'lollo1';
+            $email = $_POST['l_email'];
+            $password = $_POST['l_password'];
             $q1 = "SELECT * FROM user_d WHERE email=$1";
             $q2 = "SELECT * FROM user_d WHERE email=$1 AND password=$2";
             $result1 = pg_query_params($dbconn,$q1,array($email));
             $result2 = pg_query_params($dbconn,$q2,array($email,$password));
             if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){
-                echo "<h1> Sorry, you are not a registred user </h1>";
+                // echo "<h1> Sorry, you are not a registred user </h1>";
+                 echo '<script language="javascript">';
+                 echo 'alert("Sorry, you are not a registred user");';
+                 echo 'window.location.href="index.html";';
+                 echo '</script>';
             }
             elseif (!($line = pg_fetch_array($result2,null,PGSQL_ASSOC))){
-                echo "<h1> Sorry, Wrong password </h1>";
+                // echo "<h1> Sorry, Wrong password </h1>";
+                 echo '<script language="javascript">';
+                 echo 'alert("Sorry, Wrong password");';
+                 echo 'window.location.href="index.html";';
+                 echo '</script>';
             }
             else{
-                echo "<h1> Welcome back </h1>";
+                // echo "<h1> Welcome back </h1>";
+                 echo '<script language="javascript">';
+                 echo 'alert("Welcome Back");';
+                 echo 'window.location.href="index.html";';
+                 echo '</script>';
             }
-
+            exit();
+            
             $query = 'SELECT * FROM user_d';
             $result = pg_query($query) or die('query failed' . pg_last_error());
 

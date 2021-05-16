@@ -59,12 +59,11 @@ body{
 }
 
 #input-email, #input-psw, #input-username{
-    background: transparent;
+    background: transparent; 
     border: none;
     border-bottom: 1px solid #738719;
     color: white;
 }
-
 
 #submit-btn{
     border-radius: 25px;
