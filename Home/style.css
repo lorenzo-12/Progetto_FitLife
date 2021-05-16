@@ -1,217 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-* {
-    /* box-sizing: border-box; */
-    margin: 0;
-    padding: 0;
-
-}
-
-li, a, button {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    color: #edf0f1;
-    text-decoration: none;
-   /* background-color: #87d37c;*/
-}
-
-.Myheader-container{
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(Images/banner1.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
-}
-
-.Myheader{
-    z-index: 15;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 9vh;
-    /* min-height: 60px; */
-    /* padding: 5px 0%; */
-    /* padding-left: 3%;
-    padding-right: 6.5%; */
-    background-color: #000000f3;
-    position: sticky;
-    top:0; /* H0 AGGIUNTO SOLO POSITION STICKY E TOP:0, MA NON SO PERCHE FUNZIONA, TOCCA VEDE AHAHAHAH*/
+body{
+    padding-top: 76px;
+    background-color:#212529 ;
 }
 
 .Mylogo {
     cursor: pointer;
-    height:8vh;
-    width: 60px;
-    margin-left: 3%;
-    margin-right: 1.2%;
+    height:50px;
+    width: 75px;
 }
 
-.Mynavbar {
-    flex: auto;
-    display: inline-flex;
-    align-items: center;
-    /* margin-left: 0.7rem; */
-
-}
-
-.Mynav_links{
-    list-style: none;
-    display: inline-flex;
-    flex-wrap: nowrap ;
-    align-items: center;
-    /* margin-right: 0.7rem; */
-}
-
-.Mynav_links li{
-    padding: 0.7rem 1.2rem;
-    margin-top: 0.3em;
-    width: max-content;
-    position: relative;
-}
-
-.Mynav_links a {
-    transition: all 0.3s ease 0s;
-}
-
-.Mynav_links a:hover {
-    color:darkgreen
-}
-
-.Mynav_links a::after{
-    content: '';
-    display: block;
-    height: 0.2em;
-    width: 0%;
-    background-color: darkred;
-
-}
-
-.Mynav_links a:hover::after{
-    content: '';
-    display: block;
-    height: 0.2em;
-    width: 100%;
-    background-color: rgb(228, 121, 0);
-    margin: auto;
-    transition: 0.5s;
-
-}
-
-.Mylogin {
-    margin-left: auto;
-    margin-right: 3%;
-
-}
-
-.Mybutton {
-    padding: 9px 25px;
-    background-color: rgba(16, 134, 0, 0.925);
-    border:none;
-    border-radius: 50px;
-    cursor:pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.Mybutton:hover{
-    background-color:  rgb(0, 116, 43);
-
-}
-
-.Myhidden-menu {
+#homeAnchor{ /* PROVVISORIO */
     display: none;
+    padding-top: 0;
+    scroll-behavior: smooth;
 }
 
-.Myhidden-menu div {
+.Myheader-container{
+    min-height: 88vh;
+    width: 100%;
+    background-image: url(Images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    /* margin-top: 10.55vh; */
+    position: relative;
+    border-radius: 1.5rem;
+
+}
+
+.Mytext-holder{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 50vh ; */
+    width: 100%;
+    background:#212529 ;
+    background-color: #212529 ; /*colore dark di bootstrap*/
+}
+
+/*I NOSTRI SERVIZI*/
+
+
+.servizi{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.servizio{
+    margin: 2%;
+    overflow: hidden;
+    padding: 2% 1%;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.3s ease-in,
+                transform 0.3s ease-in;
+    width: 22vw;
+}
+
+.servizio:hover{
+    cursor: pointer;
+    background-color: #198754;
+    transform: translateY(-3px);
+}
+
+.servizio::before{ /* fa l'animazione del foglio */
+    content: '';
+    border-width: 20px;
+    border-style: solid;
+    border-color: #222f3e #222f3e rgba(1,1,1,0.4) rgba(0,0,0,0.4);
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    transition: right 0.3s ease-out,
+                top 0.3s ease-out;
+}
+
+.servizio:hover::before{
+    right: 0;
+    top: 0;
+}
+
+.titolo, .descrizione{
+    color: whitesmoke;
+}
+
+.servizio > i{
     display: block;
-    width: 2em;
-    height: 0.4em;
-    margin: 0.3rem;
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 2px;
-    background-color: #edf0f1;
+    color: #198754;
+    font-size: 4rem;
+    margin-bottom: 0.9rem;
+    transition: color 0.3s ease-out;
 }
-/* Roba per mobile */
-@media screen and (max-width:862px) {
-    body{
-        overflow-x: hidden;
-    }
 
-    .Mylogo{
-        display: none;
-    }
+.servizio > .titolo{
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.55rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    transition: color 0.3s ease-out;
+}
 
-    .Mynav_links{
-        display: flex;
+.servizio > .descrizione{
+    line-height: 1.55rem;
+    margin: 0;
+    transition: color 0.3s ease-out;
+}
+
+.servizio:hover > i,
+.servizio:hover > .titolo,
+.servizio:hover > .descrizione{
+    color: whitesmoke;
+}
+
+@media screen and (max-width:567px) {
+    .servizi{
         flex-direction: column;
-        justify-content:space-evenly;
+        justify-content: center;
         align-items: center;
-        position: absolute;
-        right: 0px;
-        top: 9vh;
-        height: 91vh;
-        width: 100%;
-        background-color: #000000a6;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        /* outline: solid red 1px; */
     }
-
-    .Mynav_links li{
-        opacity: 0;
-    }
-
-    .Mynav_links a{
-        font-size: 1.5em;
-    }
-
-    .Myhidden-menu{
-        display: block;
-        margin-left: 3%;
-        cursor: pointer;
-    }
-
-    .Mylogin{
-        font-size: 1.5em;
+    .servizio{
+        width: fit-content;
     }
 }
-
-.nav_active{
-    transform: translateX(0%);
+/*-----------------------------------------------*/
+/*-----------------------------------------------*/
+/* CHI SIAMO ------------------------------------*/
+#chisiamoAnchor{
+    scroll-behavior: smooth;
 }
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-
-}
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-8px,8px);
-}
-
-.toggle .line2{
-    opacity: 0;
-}
-
-.toggle .line3{
-    transform: rotate(45deg) translate(-8px,-8px);
-}
-
-/* CHI SIAMO */
 .team-section{
     overflow: hidden;
     text-align: center;
-    background: #34495e;
+    /* background: #34495e; */
+    background-color: #212529;
     padding: 60px;
 }
 
@@ -273,4 +203,62 @@ li, a, button {
     text-align: center;
     text-transform: uppercase;
     font-size: 22px;
+}
+
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+
+.Myfooter{
+    background-color: #171a1d ;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    color: whitesmoke;
+
+}
+
+#footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;   
+}
+
+#footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 5rem;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    padding-left: 0;
+}
+
+.socials li{
+    margin: 0 1.2rem;
+}
+
+.socials a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.socials a i{
+    font-size: 2rem;
+    transition: color 0.3s ease,
+                transform 0.3s ease-in;
+}
+
+.socials a:hover i{
+    color: #198754;
+    transform: translateY(-3px);
 }

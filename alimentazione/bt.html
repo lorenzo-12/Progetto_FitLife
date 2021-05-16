@@ -46,7 +46,7 @@
             </li>
           </ul>
           <form class="d-flex">
-            <button class="btn btn-outline-success" type="submit">Login</button>
+            <a class="nav-link" href="../Login/index.html"><button class="btn btn-outline-success" type="button">Login</button></a>
           </form>
         </div>
       </div>
@@ -55,25 +55,25 @@
     <div class="container-fluid" id="cont">
         <div class="alimenti">
           <div class="CARNE rounded" id="CARNE">
-              <img src="carne_d.png" id="ca1" class="carne img-responsive img-circle rounded" 
+              <img src="Images/carne_d.png" id="ca1" class="carne img-responsive img-circle rounded" 
                 onclick="show(1)">
-          </div>
-          <div class="PESCE rounded" id="PESCE">
-              <img src="pesce_d.png" id="pe1" class="pesce img-responsive img-circle rounded" 
-                onclick="show(2)">
           </div>
           <div class="PASTA rounded" id="PASTA">
             <a href="#collapse_farina" data-bs-toggle="collapse">
-              <img src="pasta_d.png" id="pa1" class="pasta img-responsive img-circle rounded"
+              <img src="Images/pasta_d.png" id="pa1" class="pasta img-responsive img-circle rounded"
                 onclick="show(3)">
             </a>
           </div>
           <div class="FRUTTA rounded" id="FRUTTA">
             <a href="#collapse_frutta" data-bs-toggle="collapse">
-              <img src="frutta_d.png" id="fr1" class="frutta img-responsive img-circle rounded"
+              <img src="Images/frutta_d.png" id="fr1" class="frutta img-responsive img-circle rounded"
                 onclick="show(4)">
             </a>
           </div>
+          <div class="PESCE rounded" id="PESCE">
+            <img src="Images/dolce.jpg" id="pe1" class="pesce img-responsive img-circle rounded" 
+              onclick="show(2)">
+        </div>
         </div>
 
     </div>
@@ -81,13 +81,14 @@
       <div class="collapse_carne">
         <div class="card_carne">
           <div class="card d-inline-flex" id="ca">
-            <img src="petto_di_pollo.png" class="card-img" style="height: 300px;">
+            <img src="Images/bisteccacopia.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">BISTECCA</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 25g <br>
+                CARBOIDRATI: 0g <br>
+                CALORIE: 271g <br>
+                GRASSI: 19g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_carne1',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_carne1" value="0" onchange="conta()">
@@ -98,13 +99,14 @@
         </div>
         <div class="card_carne">
           <div class="card d-inline-flex" id="ca">
-            <img src="bisteccacopia.png" class="card-img" style="height: 300px;">
+            <img src="Images/petto_di_pollo.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">POLLO</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 31g <br>
+                CARBOIDRATI: 0g <br>
+                CALORIE: 165g <br>
+                GRASSI: 4g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_carne2',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_carne2" value="0" onchange="conta()">
@@ -115,13 +117,14 @@
         </div>
         <div class="card_carne">
           <div class="card d-inline-flex"  id="ca">
-            <img src="manzo.png" class="card-img" style="height: 300px;">
+            <img src="Images/tonno.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">TONNO-</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 29g <br>
+                CARBOIDRATI: 0g <br>
+                CALORIE: 130g <br>
+                GRASSI: 1g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_carne3',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_carne3" value="0" onchange="conta()">
@@ -132,13 +135,14 @@
         </div>
         <div class="card_carne">
           <div class="card d-inline-flex" id="ca">
-            <img src="prosciuttocopia.png" class="card-img" style="height: 300px;">
+            <img src="Images/salmone.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">SALMONE</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 18g <br>
+                CARBOIDRATI: 8g <br>
+                CALORIE: 175g <br>
+                GRASSI: 7g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_carne4',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_carne4" value="0" onchange="conta()">
@@ -152,13 +156,14 @@
       <div class="collapse_pesce">
         <div class="card_pesce">
           <div class="card d-inline-flex" id="pe">
-            <img src="salmone.png" class="card-img" style="height: 300px;">
+            <img src="Images/formaggio.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">FORMAGGIO</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 25g <br>
+                CARBOIDRATI: 1g <br>
+                CALORIE: 402g <br>
+                GRASSI: 33g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_pesce1',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_pesce1" value="0" onchange="conta()">
@@ -169,13 +174,14 @@
         </div>
         <div class="card_pesce">
           <div class="card d-inline-flex" id="pe">
-            <img src="tonno.png" class="card-img" style="height: 300px;">
+            <img src="Images/frutta secca.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">FRUTTA SECCA</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 1g <br>
+                CARBOIDRATI: 89g <br>
+                CALORIE: 359g <br>
+                GRASSI: 3g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_pesce2',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_pesce2" value="0" onchange="conta()">
@@ -186,13 +192,14 @@
         </div>
         <div class="card_pesce">
           <div class="card d-inline-flex" id="pe">
-            <img src="merluzzo.png" class="card-img" style="height: 300px;">
+            <img src="Images/cioccolato.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">CIOCCOLATO</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 5g <br>
+                CARBOIDRATI: 61g <br>
+                CALORIE: 546g <br>
+                GRASSI: 31g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_pesce3',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_pesce3" value="0" onchange="conta()">
@@ -203,13 +210,14 @@
         </div>
         <div class="card_pesce">
           <div class="card d-inline-flex" id="pe">
-            <img src="dolce1.png" class="card-img" style="height: 300px;">
+            <img src="Images/avocado.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">AVOCADO</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 2g <br>
+                CARBOIDRATI: 9g <br>
+                CALORIE: 160g <br>
+                GRASSI: 15g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_pesce4',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_pesce4" value="0" onchange="conta()">
@@ -223,13 +231,14 @@
       <div class="collapse_farina">
         <div class="card_farina">
           <div class="card d-inline-flex" id="fa">
-            <img src="pasta.png" class="card-img" style="height: 300px;">
+            <img src="Images/pasta.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">PASTA</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 5g <br>
+                CARBOIDRATI: 25g <br>
+                CALORIE: 131g <br>
+                GRASSI: 1g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_farina1',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_farina1" value="0" onchange="conta()">
@@ -240,13 +249,14 @@
         </div>
         <div class="card_farina">
           <div class="card d-inline-flex" id="fa">
-            <img src="pane.png" class="card-img" style="height: 300px;">
+            <img src="Images/pane.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">PANE</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 9g <br>
+                CARBOIDRATI: 28g <br>
+                CALORIE: 130g <br>
+                GRASSI: 1g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_farina2',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_farina2" value="0" onchange="conta()">
@@ -257,13 +267,14 @@
         </div>
         <div class="card_farina">
           <div class="card d-inline-flex" id="fa">
-            <img src="cereali.png" class="card-img" style="height: 300px;">
+            <img src="Images/cereali.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">CEREALI</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 6g <br>
+                CARBOIDRATI: 87g <br>
+                CALORIE: 378g <br>
+                GRASSI: 1g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_farina3',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_farina3" value="0" onchange="conta()">
@@ -274,13 +285,14 @@
         </div>
         <div class="card_farina">
           <div class="card d-inline-flex" id="fa">
-            <img src="riso.png" class="card-img" style="height: 300px;">
+            <img src="Images/riso.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">RISO</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 3g <br>
+                CARBOIDRATI: 49g <br>
+                CALORIE: 265g <br>
+                GRASSI: 0g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_farina4',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_farina4" value="0" onchange="conta()">
@@ -294,13 +306,14 @@
       <div class="collapse_frutta">
         <div class="card_frutta">
           <div class="card d-inline-flex" id="fr">
-            <img src="insalata.png" class="card-img" style="height: 300px;">
+            <img src="Images/insalata.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">INSALATA</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 2g <br>
+                CARBOIDRATI: 3g <br>
+                CALORIE: 15g <br>
+                GRASSI: 0g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_frutta1',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_frutta1" value="0" onchange="conta()">
@@ -311,13 +324,14 @@
         </div>
         <div class="card_frutta">
           <div class="card d-inline-flex" id="fr">
-            <img src="banana.png" class="card-img" style="height: 300px;">
+            <img src="Images/banana.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">BANANA</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 1g <br>
+                CARBOIDRATI: 89g <br>
+                CALORIE: 29g <br>
+                GRASSI: 0g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_frutta2',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_frutta2" value="0" onchange="conta()">
@@ -328,13 +342,14 @@
         </div>
         <div class="card_frutta">
           <div class="card d-inline-flex" id="fr">
-            <img src="zucchine.png" class="card-img" style="height: 300px;">
+            <img src="Images/zucchine.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">ZUCCHINE</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 1g <br>
+                CARBOIDRATI: 17g <br>
+                CALORIE: 1g <br>
+                GRASSI: 0g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_frutta3',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_frutta3" value="0" onchange="conta()">
@@ -345,13 +360,14 @@
         </div>
         <div class="card_frutta">
           <div class="card d-inline-flex" id="fr">
-            <img src="pomodoro.png" class="card-img" style="height: 300px;">
+            <img src="Images/pomodoro.png" class="card-img" style="height: 300px;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">POMODORO</h5>
               <p class="card-text">
-                PROTEINE: 10g <br>
-                CARBOIDRATI: 10g <br>
-                CALORIE: 10g <br>
+                PROTEINE: 1g <br>
+                CARBOIDRATI: 4g <br>
+                CALORIE: 17g <br>
+                GRASSI: 0g <br>
               <div class="bottoni d-inline-flex">
               <button class="btn" id="bottoni" onclick="aumenta('value_frutta4',-1)">-</button>
               <input type="number" class="form-control" name="bot" id="value_frutta4" value="0" onchange="conta()">
