@@ -37,7 +37,7 @@
                 // echo "<h1> Welcome back </h1>";
                  echo '<script language="javascript">';
                  echo 'alert("Welcome Back");';
-                 echo 'window.location.href="index.html";';
+                 echo 'window.location.href="/Home/index.html";';
                  echo '</script>';
             }
             exit();
