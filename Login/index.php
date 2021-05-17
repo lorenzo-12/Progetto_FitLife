@@ -1,3 +1,35 @@
+
+<?php 
+  session_start();
+  $email = "----";
+  if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+  }
+  echo "<script>alert('$email');</script>";
+  if(isset($_SESSION['logged_in'])){
+    $session = $_SESSION['logged_in'];
+  }
+
+    $dbconn = pg_connect("host=localhost
+                                  port=5432
+                                  dbname=ltw
+                                  user=postgres
+                                  password=lollo")
+              or die('could not connect' . pg_last_error() );
+    $username="";
+    $q1 = "SELECT username FROM user_d WHERE email=$1";
+    $result1 = pg_query_params($dbconn,$q1,array($email));
+    $line = pg_fetch_array($result1,null, PGSQL_ASSOC);
+    if($line){  
+      foreach ($line as $col_value) {
+        $username=$col_value;
+        echo "<script>alert('$username');</script>";
+      }
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <head>
     <!--Questo meta qua sotto serve per il mobile layout-->
@@ -27,23 +59,23 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../Home/test.html">Home</a>
+                <a class="nav-link" href="../Home/index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Home/test.html#chisiamoAnchor">Chi siamo</a>
+                <a class="nav-link" href="../Home/index.php#chisiamoAnchor">Chi siamo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Scheda/Scheda.html">Scheda</a>
+                <a class="nav-link" href="../Scheda/Scheda.php">Scheda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../alimentazione/bt.html">Alimentazione</a>
+                <a class="nav-link" href="../alimentazione/bt.php">Alimentazione</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Shop/index.html">Shop</a>
+                <a class="nav-link" href="../Shop/index.php">Shop</a>
               </li>
             </ul>
             <form class="d-flex">
-                <a class="nav-link" href="../Login/index.html"><button class="btn btn-outline-success" type="button">Login</button></a>
+                <a class="nav-link" href="../Login/index.html"><button class="btn btn-outline-success" type="button" id="test_login" >Login</button></a>
             </form>
           </div>
         </div>
@@ -61,13 +93,13 @@
                 <div id="input-container" class="container-sm">
                     <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
                     <div class="input-group mb-4">
-                        <input id="input-email" name="l_email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        <input id="input-email" name="l_email" value="" type="email" class="form-control" placeholder="Email" aria-label="Email">
                     </div>
                     <div class="input-group mb-4">
-                        <input id="input-psw" name="l_password" type="password" class="form-control" placeholder="Password" aria-label="Password">
+                        <input id="input-psw" name="l_password" value="" type="password" class="form-control" placeholder="Password" aria-label="Password">
                     </div>
                     <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
+                        <input class="form-check-input" name="l_remember" type="checkbox" value="" id="rememberCheck">
                         <label class="form-check-label" for="rememberCheck">
                             Remember me
                         </label>
@@ -123,3 +155,28 @@
       </script>
       <script src="loginJS.js"></script>
 </body>
+
+<?php 
+  if(isset($_COOKIE['email']) and isset($_COOKIE['password'])){ 
+    $email = $_COOKIE['email'];
+    $password = $_COOKIE['password'];
+
+    echo "<script>
+      // alert('$email'+'   '+'$password');
+      document.getElementById('input-email').value = '$email';
+      document.getElementById('input-psw').value = '$password';
+    </script>";
+  }
+
+  if(isset($_SESSION['logged_in']) and isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+    echo "<script>
+    document.getElementById('test_login').innerHTML='$username'; 
+    </script>";
+  }
+  else{
+    echo "<script>
+    document.getElementById('test_login').innerHTML='Login';
+    </script>";
+  }
+?>

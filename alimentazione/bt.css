@@ -15,6 +15,7 @@ body{
 #cont{
     flex-wrap: wrap;
     display: flex;
+    
 }
 
 .alimenti{
@@ -23,7 +24,7 @@ body{
 
 .carne, .pesce, .pasta, .frutta{
     width: 100%;
-    height: 100%;
+    height: 40vh;
 }
 
 #CARNE{

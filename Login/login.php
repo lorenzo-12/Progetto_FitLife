@@ -1,10 +1,11 @@
 <html>
     <title>esempio in php</title>
     <head></head>
-    <body>
-        
+    <body> 
+
 
         <?php 
+
             $dbconn = pg_connect("host=localhost
                                 port=5432
                                 dbname=ltw
@@ -23,21 +24,28 @@
                 // echo "<h1> Sorry, you are not a registred user </h1>";
                  echo '<script language="javascript">';
                  echo 'alert("Sorry, you are not a registred user");';
-                 echo 'window.location.href="index.html";';
+                 echo 'window.location.href="index.php";';
                  echo '</script>';
             }
             elseif (!($line = pg_fetch_array($result2,null,PGSQL_ASSOC))){
                 // echo "<h1> Sorry, Wrong password </h1>";
                  echo '<script language="javascript">';
                  echo 'alert("Sorry, Wrong password");';
-                 echo 'window.location.href="index.html";';
+                 echo 'window.location.href="index.php";';
                  echo '</script>';
             }
             else{
                 // echo "<h1> Welcome back </h1>";
+                if(isset($_POST['l_remember'])){
+                    setcookie('email',$email,time()+60*60*7);
+                    setcookie('password',$password,time()+60*60*7);
+                }
+                session_start();
+                $_SESSION['email'] = $email;
+                $_SESSION['logged_in'] = True;
                  echo '<script language="javascript">';
                  echo 'alert("Welcome Back");';
-                 echo 'window.location.href="index.html";';
+                 echo 'window.location.href="../Home/index.php";';
                  echo '</script>';
             }
             exit();

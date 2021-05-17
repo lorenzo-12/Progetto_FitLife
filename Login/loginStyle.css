@@ -10,6 +10,10 @@ body{
     width: 75px;
 }
 
+#user_login{
+    visibility: hidden;
+}
+
 #form-box{
     width: 40vw;
     min-height: 50vh;

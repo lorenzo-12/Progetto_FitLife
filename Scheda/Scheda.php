@@ -1,3 +1,33 @@
+<?php 
+  session_start();
+  $email = "----";
+  if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+  }
+  echo "<script>alert('$email');</script>";
+  if(isset($_SESSION['logged_in'])){
+    $session = $_SESSION['logged_in'];
+  }
+
+    $dbconn = pg_connect("host=localhost
+                                  port=5432
+                                  dbname=ltw
+                                  user=postgres
+                                  password=lollo")
+              or die('could not connect' . pg_last_error() );
+    $username="";
+    $q1 = "SELECT username FROM user_d WHERE email=$1";
+    $result1 = pg_query_params($dbconn,$q1,array($email));
+    $line = pg_fetch_array($result1,null, PGSQL_ASSOC);
+    if($line){  
+      foreach ($line as $col_value) {
+        $username=$col_value;
+        echo "<script>alert('$username');</script>";
+      }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,23 +57,23 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="../Home/index.html">Home</a>
+                    <a class="nav-link" href="../Home/index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../Home/index.html#chisiamoAnchor">Chi siamo</a>
+                    <a class="nav-link" href="../Home/index.php#chisiamoAnchor">Chi siamo</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./Scheda.html">Scheda</a>
+                    <a class="nav-link active" aria-current="page" href="./Scheda.php">Scheda</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../alimentazione/bt.html">Alimentazione</a>
+                    <a class="nav-link" href="../alimentazione/bt.php">Alimentazione</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../Shop/index.html">Shop</a>
+                    <a class="nav-link" href="../Shop/index.php">Shop</a>
                   </li>
                 </ul>
                 <form class="d-flex">
-                  <a class="nav-link" href="../Login/index.html"><button class="btn btn-outline-success" type="button">Login</button></a>
+                  <a class="nav-link" href="../Login/index.php"><button class="btn btn-outline-success" id="test_login" type="button">Login</button></a>
                 </form>
               </div>
             </div>
@@ -423,43 +453,17 @@
           </script>
           <script src="SchedaJS.js"></script>
     </body>
+</html>
 
-    <!--
-      
-@media screen and (max-width: 450px) {
-    
-    #man-container{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        /* height: 40vh; */
-      
-    }
-
-    #btnsx{
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* margin-top: auto;
-        margin-bottom: auto; */
-    }
-
-    #man-container img{
-        display:none;
-    }
-
-    #btndx{
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* margin-top: auto;
-        margin-bottom: auto; */
-    }
-
-
-    #woman-container img{
-        display: none;
-    }
-
-}
-
-    -->
+<?php 
+  if(isset($_SESSION['logged_in'])){
+    echo "<script>
+    document.getElementById('test_login').innerHTML='$username'; 
+    </script>";
+  }
+  else{
+    echo "<script>
+    document.getElementById('test_login').innerHTML='Login';
+    </script>";
+  }
+?>

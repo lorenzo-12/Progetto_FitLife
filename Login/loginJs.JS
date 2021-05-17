@@ -1,3 +1,4 @@
+
 function regSwitch(){
     const logForm = $("#login-form");
     const regForm = $("#register-form");
@@ -21,3 +22,5 @@ function logSwitch(){
     logForm.fadeIn("slow");
     logForm.css("display","flex");
 }
+
+
