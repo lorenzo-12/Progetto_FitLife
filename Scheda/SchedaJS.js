@@ -1,3 +1,15 @@
+function checkLog(){
+    var u = localStorage.getItem("user");
+    if(u!=null){
+        $("#btn-login").text(u);
+    }
+    else{
+        alert("Sorry, you are not logged in!")
+        document.location.href = "../Login/index.html";
+    }
+}
+checkLog();
+
 function imgSwitch(){ //funzione per switchare da una img all'altra relativamente all'uomo e alla donna
     const manImg = $("#man-container");
     const womanImg = $("#woman-container");

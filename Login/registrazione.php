@@ -9,7 +9,7 @@
                                 port=5432
                                 dbname=ltw
                                 user=postgres
-                                password=lollo")
+                                password=@postgres17!@")
             or die('could not connect' . pg_last_error() );
 
             $username = $_POST['r_username'];

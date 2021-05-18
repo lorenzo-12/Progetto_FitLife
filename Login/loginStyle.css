@@ -58,14 +58,15 @@ body{
     flex-direction: column;
 }
 
-#input-email, #input-psw, #input-username{
+#regInput-email, #regInput-psw, #regInput-username,
+#logInput-email, #logInput-psw{
     background: transparent; 
     border: none;
     border-bottom: 1px solid #738719;
     color: white;
 }
 
-#submit-btn{
+#logSubmit-btn,#regSubmit-btn{
     border-radius: 25px;
     background: linear-gradient(to right, #198754, #738719);
     outline: none;
