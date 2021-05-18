@@ -1,3 +1,10 @@
+function checkLog(){
+    var u = localStorage.getItem("user");
+    if(u!=null){
+        $("#btn-login").text(u);
+    }
+}
+checkLog();
 
 function serviziClick(){ //funzione per reindirizzare alle rispettive pagine indicate
                         // dai div dei servizi

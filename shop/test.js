@@ -1,3 +1,11 @@
+function checkLog(){
+    var u = localStorage.getItem("user");
+    if(u!=null){
+        $("#btn-login").text(u);
+    }
+}
+checkLog();
+
 let carts = document.querySelectorAll('.add-cart');
 
 let products = [

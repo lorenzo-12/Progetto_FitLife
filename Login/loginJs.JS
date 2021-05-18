@@ -1,3 +1,19 @@
+//funzione da incorporare negli altri file
+function checkLog(){
+    var u = localStorage.getItem("user");
+    var email = localStorage.getItem("mail");
+    var psw = localStorage.getItem("psw");
+    if(u!=null){
+        $("#btn-login").text(u);
+    }
+    if(email!=null && psw!=null){
+        $("#logInput-email").val(email);
+        $("#logInput-psw").val(psw);
+        
+    }
+}
+checkLog();
+
 function regSwitch(){
     const logForm = $("#login-form");
     const regForm = $("#register-form");
@@ -21,3 +37,4 @@ function logSwitch(){
     logForm.fadeIn("slow");
     logForm.css("display","flex");
 }
+

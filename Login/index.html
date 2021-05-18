@@ -43,12 +43,12 @@
               </li>
             </ul>
             <form class="d-flex">
-                <a class="nav-link" href="../Login/index.html"><button class="btn btn-outline-success" type="button">Login</button></a>
+                <a class="nav-link" href="../Login/index.html"><button class="btn btn-outline-success" type="button" id="btn-login">Login</button></a>
             </form>
           </div>
         </div>
     </nav>
-    
+
     <!-- FORMS-->
     <div id="form-box" class="container-sm">
         <div id="button-box">
@@ -62,19 +62,19 @@
                 <div id="input-container" class="container-sm">
                     <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
                     <div class="input-group mb-4">
-                        <input id="input-email" name="l_email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        <input id="logInput-email" name="l_email" type="email" class="form-control" placeholder="Email" aria-label="Email">
                     </div>
                     <div class="input-group mb-4">
-                        <input id="input-psw" name="l_password" type="password" class="form-control" placeholder="Password" aria-label="Password">
+                        <input id="logInput-psw" name="l_password" type="password" class="form-control" placeholder="Password" aria-label="Password">
                     </div>
                     <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
-                        <label class="form-check-label" for="rememberCheck">
+                        <input class="form-check-input" type="checkbox" value="true" name="log-rememberCheck">
+                        <label class="form-check-label" for="log-rememberCheck">
                             Remember me
                         </label>
                       </div>
                     <div class="input-group mb-4">
-                        <button id="submit-btn" class="btn btn-success" type="submit">Log In</button>
+                        <button id="logSubmit-btn" class="btn btn-success" type="submit" >Log In</button>
                     </div>
                 </div>
             </form>
@@ -82,23 +82,23 @@
             <form action="registrazione.php" method="POST" id="register-form">
                 <div id="input-container" class="container-sm">
                     <div class="input-group mb-4">
-                        <input id="input-username" name="r_username" type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        <input id="regInput-username" name="r_username" type="text" class="form-control" placeholder="Username" aria-label="Username">
                     </div>
                     <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
                     <div class="input-group mb-4">
-                        <input id="input-email" name="r_email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        <input id="regInput-email" name="r_email" type="email" class="form-control" placeholder="Email" aria-label="Email">
                     </div>
                     <div class="input-group mb-4">
-                        <input id="input-psw" name="r_password" type="password" class="form-control" placeholder="Password" aria-label="Password">
+                        <input id="regInput-psw" name="r_password" type="password" class="form-control" placeholder="Password" aria-label="Password">
                     </div>
                     <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
-                        <label class="form-check-label" for="rememberCheck">
+                        <input class="form-check-input" type="checkbox" value="" id="reg-rememberCheck">
+                        <label class="form-check-label" for="reg-rememberCheck">
                           Remember me
                         </label>
                       </div>
                     <div class="input-group mb-4">
-                        <button id="submit-btn" name="registrazionebutton" class="btn btn-success" type="submit">Register</button>
+                        <button id="regSubmit-btn" name="registrazionebutton" class="btn btn-success" type="submit">Register</button>
                     </div>
                 </div>
             </form>

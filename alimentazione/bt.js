@@ -1,3 +1,15 @@
+function checkLog(){
+    var u = localStorage.getItem("user");
+    if(u!=null){
+        $("#btn-login").text(u);
+    }
+    else{
+        alert("Sorry, you are not logged in!");
+        document.location.href = "../Login/index.html";
+    }
+}
+checkLog();
+
 var carne1 = {p: "25",c: "271",cb: "0",g:"19", nome: "bistecca"}
 var carne2 = {p: "31",c: "165",cb: "0",g:"4", nome: "pollo"}
 var carne3 = {p: "29",c: "130",cb: "0",g:"1", nome: "tonno"}
