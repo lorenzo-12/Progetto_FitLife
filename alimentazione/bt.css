@@ -1,4 +1,4 @@
-@import "../Home/styleTest.css";
+
 
 body{
     padding-top: 76px;
@@ -219,7 +219,7 @@ body{
 
     .collapse_carne, .collapse_pesce, 
     .collapse_farina,.collapse_frutta{
-        display: inline-flex;
+        /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -251,7 +251,7 @@ body{
 
     .collapse_carne, .collapse_pesce,
     .collapse_farina, .collapse_frutta{
-        display: inline-flex;
+        /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -282,7 +282,7 @@ body{
 
     .collapse_carne, .collapse_pesce, 
     .collapse_farina, .collapse_frutta{
-        display: inline-flex;
+        /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -309,7 +309,7 @@ body{
 
     .collapse_carne, .collapse_pesce, 
     .collapse_farina, .collapse_frutta{
-        display: inline-flex;
+        /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
     }
