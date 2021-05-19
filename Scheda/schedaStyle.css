@@ -48,13 +48,17 @@ body{
                 transform 0.3s ease-in;
 }
 
+#man-icon{
+    color: #198754;
+}
+
 .coppiaIcone a:hover i{
     color: #198754;
     transform: translateY(-3px);
 }
 
 #man-container{
-    display: none;
+    display: flex;
     justify-content: space-evenly;
 
 }
