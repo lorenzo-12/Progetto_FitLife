@@ -52,10 +52,10 @@
                  echo '<script language="javascript">';
                  echo "alert('Welcome Back');";
                  echo 'window.location.href="../Home/index.html";';
-                 echo "localStorage.setItem('user','$user');";
-                 if(isset($_POST['log-rememberCheck'])){
-                    echo "localStorage.setItem('mail','$mail');", 
-                        "localStorage.setItem('psw','$psw');";
+                 echo "localStorage.setItem('user','$user');"; //SET USERNAME NEL LOCAL STORAGE
+                 if(isset($_POST['log-rememberCheck'])){ //CONTROLLO SE è STATO CLICCATO IL REMEMBER ME
+                    echo "localStorage.setItem('mail','$mail');", //SET MAIL NEL LOCAL STORAGE
+                        "localStorage.setItem('psw','$psw');"; //SET PSW NEL LOCAL STORAGE
                  }
                  echo '</script>';
             }

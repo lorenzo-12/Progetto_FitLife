@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="schedaStyle.css">
     </head>
     <body>
+      <!-- NAVBAR -->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" >
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -48,7 +49,7 @@
               </div>
             </div>
           </nav>
-          <!--Img tizio per muscoli-->
+          <!--Img container-->
           <div id="muscle-container" class="container-lg">
             <div id="icon-div" class="container-sm">
               <ul class="coppiaIcone">
@@ -56,6 +57,7 @@
                 <li><a href="#"><i id="woman-icon" class="fas fa-female"></i></a></li>
               </ul>
             </div>
+            <!-- IMG UOMO -->
             <div id="man-container" class="container-fluid">
               <div class="btnsx">
                 <button name="btn-petto" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-petto')">PETTO</button>
@@ -69,7 +71,8 @@
                 <button name="btn-tricipiti" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-tricipiti')">TRICIPITI</button>
               </div>
             </div>
-            <div id="woman-container"> <!--da trovare img per donna-->
+            <!--IMG DONNA-->
+            <div id="woman-container"> 
               <div class="btnsx">
                 <button name="btn-petto" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-petto')">PETTO</button>
                 <button name="btn-addome" id="bottone-muscolo" class="btn btn-lg btn-outline-success" onclick="showAccordionItem('accordion-addome')">ADDOME</button>
@@ -414,7 +417,7 @@
               </ul>
             </div>
           </footer>
-          
+          <!-- SCRIPT -->
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" 
             crossorigin="anonymous">
@@ -423,43 +426,5 @@
           </script>
           <script src="SchedaJS.js"></script>
     </body>
-
-    <!--
-      
-@media screen and (max-width: 450px) {
-    
-    #man-container{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        /* height: 40vh; */
-      
-    }
-
-    #btnsx{
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* margin-top: auto;
-        margin-bottom: auto; */
-    }
-
-    #man-container img{
-        display:none;
-    }
-
-    #btndx{
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* margin-top: auto;
-        margin-bottom: auto; */
-    }
-
-
-    #woman-container img{
-        display: none;
-    }
-
-}
-
-    -->
+</html>
+  

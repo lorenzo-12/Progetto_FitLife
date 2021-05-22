@@ -1,3 +1,4 @@
+//FUNZIONE CHE CONTROLLA SE è STATO ESEGUITO IL LOGIN
 function checkLog(){
     var u = localStorage.getItem("user");
     if(u!=null){
@@ -5,6 +6,7 @@ function checkLog(){
     }
 }
 checkLog();
+
 
 function serviziClick(){ //funzione per reindirizzare alle rispettive pagine indicate
                         // dai div dei servizi
