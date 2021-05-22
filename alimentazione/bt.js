@@ -47,24 +47,29 @@ var sum_gra = document.getElementById("sum_gra");
 
 //funzione che calcola il valore totale delle proteine, dei carboidrati, ecc... 
 function conta(){
+    //setto delle variabili a 0, che mi serviranno poi per tener conto della somma dei macro
     var a = document.getElementsByName("bot");
     var tmp_prot = 0;
     var tmp_cal = 0;
     var tmp_carb = 0;
     var tmp_gra = 0;
+    //prendo la lista e la svuoto (poichè la ricompongo ogni volta in modo da mantenere gli oggetti in ordine)
     $("#alimenti_lista").empty();
     for(var i=0; i<a.length; i++){
         if(a[i].value=="") a[i].value=0;
+        //sommo alle variabili di prima il valore dei macro di ogni oggetto (moltiplicati per il nuemro di oggetti)
         tmp_prot = parseInt(tmp_prot)+parseFloat(a[i].value)*parseInt(le[i].p);
         tmp_cal = parseInt(tmp_cal)+parseFloat(a[i].value)*parseInt(le[i].c);
         tmp_carb = parseInt(tmp_carb)+parseFloat(a[i].value)*parseInt(le[i].cb);
         tmp_gra = parseInt(tmp_gra)+parseFloat(a[i].value)*parseInt(le[i].g);
+        //se un alimento è presente almeno una votla lo aggiungo alla lista.
         if(a[i].value>0){
             var aux = 0;
             aux = parseFloat(a[i].value)*100
             if(a[i].value>0) $("#alimenti_lista").append($("<li class='list-group-item' id='li_item'>").html(le[i].nome));
         }
     }
+    //modifico la scritta dentro i bottoni
     sum_prot.innerHTML="PROTEINE: "+tmp_prot;
     sum_cal.innerHTML="CALORIE: "+tmp_cal;
     sum_carb.innerHTML="CARBOIDRATI: "+tmp_carb;
@@ -75,14 +80,19 @@ function conta(){
 
 //funziona che serve per aumentare o diminuire il numero degli alimenti
 function aumenta(str,n){
+    //prendo l'elemento e un numero (1 o -1)
     var x = document.getElementById(str);
+    //se il n==1 allora devo incrementare il valore dell'elemento 
     if(n==1){
         x.value++;
     }
+    //se n==-1 devo decrementare il valore dell'elemento
     if(n==-1){
         x.value--;
     }
+    //controllo che il valore non sia <0, se diventa minore di 0 allora lo pongo a zero
     if(x.value<0) x.value=0;
+    //siccome ho cambiato il valore richiamo la funzione conta per aggiornare i valori 
     conta();
 }
 
@@ -93,15 +103,19 @@ var coll_farina = $(".collapse_farina");
 var coll_frutta = $(".collapse_frutta");
 
 
-//funzione
+//funzione mostra a schermo al massimo 1 solo gruppo di alimenti 
 function show(str){
+    //se str==1 (cioè gruppo proteine allora: 
     if(str==1){
+        //se gli alimenti sono visibili allora metti tutti i gruppi invisibili
         if(coll_carne.css("display")=="flex"){
             coll_pesce.css("display","none");
             coll_carne.css("display","none");
             coll_farina.css("display","none");
             coll_frutta.css("display","none");
         }
+        //altrimenti (quindi nel caso in cui il gruppo di aliemnti delle proteine non era visibilie)
+        //lo metti visibile e metti tutti gli altri a non visibili
         else{
             coll_carne.css("display","flex");
             coll_pesce.css("display","none");
@@ -109,6 +123,7 @@ function show(str){
             coll_frutta.css("display","none");
         }
     }
+    //stesso ragionamento di sopra ma riguardo agli alimenti del gruppo CARBOIDRATI
     if(str==2){
         if(coll_pesce.css("display")=="flex"){
             coll_carne.css("display","none");

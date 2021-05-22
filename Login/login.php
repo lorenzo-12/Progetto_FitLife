@@ -18,12 +18,10 @@
             // $check = isset($_POST['log-rememberCheck']);
             $q1 = "SELECT * FROM user_d WHERE email=$1";
             $q2 = "SELECT * FROM user_d WHERE email=$1 AND password=$2";
-
             $q3 = "SELECT username FROM user_d WHERE email=$1 AND password=$2";
 
             $result1 = pg_query_params($dbconn,$q1,array($email));
             $result2 = pg_query_params($dbconn,$q2,array($email,$password));
-
             $result3 = pg_query_params($dbconn,$q3,array($email,$password));
             
 
