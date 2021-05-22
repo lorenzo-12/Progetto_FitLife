@@ -8,6 +8,24 @@ checkLog();
 
 let carts = document.querySelectorAll('.add-cart');
 
+let buy = document.querySelectorAll('.purchasing');
+
+function buttonPurchasing() {
+    if(localStorage.getItem('totalCost')==null || localStorage.getItem('totalCost')==='0')
+        $('#acquista').attr('disabled', true);
+}
+
+function purchasing() {
+    let cost = localStorage.getItem('totalCost');
+    cost = parseInt(cost);
+    alert(`Pagamento di ${cost},00€ effettuato con successo.`);
+    localStorage.removeItem('totalCost');
+    localStorage.removeItem('productsInCart');
+    localStorage.removeItem('cartNumbers');
+    location.reload();
+}
+
+buttonPurchasing();
 let products = [
     {
         name: 'Barretta proteica white',
@@ -106,6 +124,7 @@ function setItems(product) {
     if(cartItems != null) {
 
         if(cartItems[product.tag] == undefined) {
+            //console.log(typeof(cartItems[product.tag]));
             cartItems = {
                 ...cartItems, //riprendo gli oggetti che già erano presenti
                 [product.tag]: product
@@ -190,6 +209,7 @@ function decrease(x){
     localStorage.setItem("cartNumbers", JSON.stringify(cartNum));
     displayCart();
     onLoadCartNumbers();
+    buttonPurchasing();
 }
 
 function increase(x){
