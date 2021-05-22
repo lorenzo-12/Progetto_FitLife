@@ -10,6 +10,7 @@ function checkLog(){
 }
 checkLog();
 
+// lista degli oggetti che rappresentano gli alimenti 
 var carne1 = {p: "25",c: "271",cb: "0",g:"19", nome: "bistecca"}
 var carne2 = {p: "31",c: "165",cb: "0",g:"4", nome: "pollo"}
 var carne3 = {p: "29",c: "130",cb: "0",g:"1", nome: "tonno"}
@@ -30,7 +31,7 @@ var frutta2 = {p: "1",c: "89",cb: "23",g:"0", nome: "banana"}
 var frutta3= {p: "1",c: "1",cb: "17",g:"0", nome: "zucchine"}
 var frutta4 = {p: "1",c: "17",cb: "4",g:"0", nome: "pomodori"}
 
-
+//dichiarazione di variabili che verrano poi utilizzate all'interno delle funzioni successive
 var le = new Array();
 le[0]=carne1; le[1]=carne2; le[2]=carne3; le[3]=carne4;
 le[4]=pesce1; le[5]=pesce2; le[6]=pesce3; le[7]=pesce4;
@@ -44,7 +45,7 @@ var sum_gra = document.getElementById("sum_gra");
 //var sum_ali = document.getElementById("alsel");
 
 
-
+//funzione che calcola il valore totale delle proteine, dei carboidrati, ecc... 
 function conta(){
     var a = document.getElementsByName("bot");
     var tmp_prot = 0;
@@ -72,6 +73,7 @@ function conta(){
 
 }
 
+//funziona che serve per aumentare o diminuire il numero degli alimenti
 function aumenta(str,n){
     var x = document.getElementById(str);
     if(n==1){
@@ -91,6 +93,7 @@ var coll_farina = $(".collapse_farina");
 var coll_frutta = $(".collapse_frutta");
 
 
+//funzione
 function show(str){
     if(str==1){
         if(coll_carne.css("display")=="flex"){

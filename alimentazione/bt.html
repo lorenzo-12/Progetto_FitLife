@@ -52,6 +52,8 @@
       </div>
     </nav>
 
+
+<!-- sezione in cui sono presenti le immagini che rappresentano i 4 gruppi di alimenti -->
     <div class="container-fluid" id="cont">
         <div class="alimenti">
           <div class="CARNE rounded" id="CARNE">
@@ -73,10 +75,14 @@
           <div class="PESCE rounded" id="PESCE">
             <img src="Images/dolce.jpg" id="pe1" class="pesce img-responsive img-circle rounded" 
               onclick="show(2)">
+          </div>
         </div>
-        </div>
-
     </div>
+
+<!-- sezione che contine gli alimenti (divisi per gruppo) -->
+
+
+    <!-- alimenti del gruppo PROTEINE -->
     <div class="container-fluid" id="contcollapse">
       <div class="collapse_carne">
         <div class="card_carne">
@@ -153,6 +159,7 @@
         </div>
       </div>
 
+      <!-- alimenti del gruppo CARBOIDRATI -->
       <div class="collapse_pesce">
         <div class="card_pesce">
           <div class="card d-inline-flex" id="pe">
@@ -228,6 +235,7 @@
         </div>
       </div>
 
+      <!-- alimenti del gruppo GRASSI -->
       <div class="collapse_farina">
         <div class="card_farina">
           <div class="card d-inline-flex" id="fa">
@@ -303,6 +311,7 @@
         </div>
       </div>
 
+      <!-- alimenti del gruppo CALORIE -->
       <div class="collapse_frutta">
         <div class="card_frutta">
           <div class="card d-inline-flex" id="fr">
@@ -378,12 +387,15 @@
         </div>
       </div>
     </div>
+
+<!-- div contenente i 4 bottoni in cui vengono riportati i valori finali degli alimenti -->
     <div class="container_valori">
       <a class="btn btn3" id="sum_prot">PROTEINE: </a>
       <a class="btn btn3" id="sum_carb">CARBOIDRATI: </a>
       <a class="btn btn3" id="sum_gra">GRASSI: </a>
       <a class="btn btn3" id="sum_cal">CALORIE: </a>
     </div>
+<!-- div contenente la lista degli alimenti selezionati -->
     <div class="testo"><p class="text-center" id="testo_lista">LISTA ALIMENTI:</p></div>
     <div class="container_alsel">
       <!-- <a class="btn btn3 text-center" id="alsel">  -->
