@@ -1,3 +1,4 @@
+//FUNZIONE PER CONTROLLO LOGIN
 function checkLog(){
     var u = localStorage.getItem("user");
     if(u!=null){

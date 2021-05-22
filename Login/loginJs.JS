@@ -1,12 +1,12 @@
-//funzione da incorporare negli altri file
+//FUNZIONE PER CONTROLLARE SE è STATO ESEGUITO IL LOGIN
 function checkLog(){
     var u = localStorage.getItem("user");
-    var email = localStorage.getItem("mail");
+    var email = localStorage.getItem("mail"); // PRENDO GLI ELEMENTI DAL LOCAL STORAGE (SE NON SONO NULL)
     var psw = localStorage.getItem("psw");
     if(u!=null){
-        $("#btn-login").text(u);
+        $("#btn-login").text(u); //SETTO LO USERNAME SUL BOTTONE 
     }
-    if(email!=null && psw!=null){
+    if(email!=null && psw!=null){//COMPILO IL LOGIN DATO CHE è STATO RICHIESTO CON IL REMEMBER ME
         $("#logInput-email").val(email);
         $("#logInput-psw").val(psw);
         
@@ -14,7 +14,7 @@ function checkLog(){
 }
 checkLog();
 
-function regSwitch(){
+function regSwitch(){ //FUNZIONE PER SWITCHARE TRA REGISTRAZIONE E LOGIN
     const logForm = $("#login-form");
     const regForm = $("#register-form");
     const btnBack = $("#btnBack");
@@ -26,7 +26,7 @@ function regSwitch(){
     regForm.css("display","flex");
 }
 
-function logSwitch(){
+function logSwitch(){//FUNZIONE PER SWITCHARE TRA LOGIN E REGISTRAZIONE
     const logForm = $("#login-form");
     const regForm = $("#register-form");
     const btnBack = $("#btnBack");

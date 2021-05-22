@@ -158,3 +158,61 @@ h3{
     padding-top: 10px;
 }
 
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+/*----FOOTER----------------*/
+
+.Myfooter{
+    background-color: #171a1d ;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    color: whitesmoke;
+    position: relative;
+    bottom: 0;
+}
+
+#footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;   
+}
+
+#footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 5rem;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    padding-left: 0;
+}
+
+.socials li{
+    margin: 0 1.2rem;
+}
+
+.socials a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.socials a i{
+    font-size: 2rem;
+    transition: color 0.3s ease,
+                transform 0.3s ease-in;
+}
+
+.socials a:hover i{
+    color: #198754;
+    transform: translateY(-3px);
+}

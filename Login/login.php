@@ -18,12 +18,10 @@
             // $check = isset($_POST['log-rememberCheck']);
             $q1 = "SELECT * FROM user_d WHERE email=$1";
             $q2 = "SELECT * FROM user_d WHERE email=$1 AND password=$2";
-
             $q3 = "SELECT username FROM user_d WHERE email=$1 AND password=$2";
 
             $result1 = pg_query_params($dbconn,$q1,array($email));
             $result2 = pg_query_params($dbconn,$q2,array($email,$password));
-
             $result3 = pg_query_params($dbconn,$q3,array($email,$password));
             
 
@@ -52,10 +50,10 @@
                  echo '<script language="javascript">';
                  echo "alert('Welcome Back');";
                  echo 'window.location.href="../Home/index.html";';
-                 echo "localStorage.setItem('user','$user');";
-                 if(isset($_POST['log-rememberCheck'])){
-                    echo "localStorage.setItem('mail','$mail');", 
-                        "localStorage.setItem('psw','$psw');";
+                 echo "localStorage.setItem('user','$user');"; //SET USERNAME NEL LOCAL STORAGE
+                 if(isset($_POST['log-rememberCheck'])){ //CONTROLLO SE è STATO CLICCATO IL REMEMBER ME
+                    echo "localStorage.setItem('mail','$mail');", //SET MAIL NEL LOCAL STORAGE
+                        "localStorage.setItem('psw','$psw');"; //SET PSW NEL LOCAL STORAGE
                  }
                  echo '</script>';
             }
