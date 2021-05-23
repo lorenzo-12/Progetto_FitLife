@@ -4,11 +4,27 @@ body{
     background-color:#212529 ;
 }
 
+/* .imgcont{
+    position: relative;
+    text-align: center;
+
+} */
+
 .Mylogo {
     cursor: pointer;
     height:50px;
     width: 75px;
 }
+/* 
+.botLogoText{
+    font-weight:bolder ;
+    font-family: sans-serif;
+    color: #198754;
+    position: absolute;
+    bottom: 2px;
+    text-align: center;
+    left: 10%;
+} */
 
 #homeAnchor{ /* PROVVISORIO */
     display: none;
@@ -141,7 +157,7 @@ body{
     text-align: center;
     /* background: #34495e; */
     background-color: #212529;
-    padding: 60px;
+    padding: 5%;
 }
 
 .team-section h1{
@@ -156,7 +172,7 @@ body{
     margin: auto;
     width: 160px;
     height: 3px;
-    background: #3498db;
+    background: #198754;/*#3498db;*/
     margin-bottom: 40px;
 }
 
@@ -184,7 +200,11 @@ body{
 }
 
 .section{
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     margin: auto;
     font-size: 20px;
     color: white;
