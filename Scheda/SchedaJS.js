@@ -84,11 +84,21 @@ function showAccordionItem(accordionItemString){
 }
 
 //Codice per aggiungere esercizi alla scheda quando checkati
-function addExcercise(checkbox,esercizio,nserie){
+function addExcercise(checkbox,esercizio,sezione,index){
+    const input = "[name='accordion-"+sezione+"']";
+   
     const serie = esercizio + "serie";
     if(checkbox.checked){
+
+        var reps = $(input+" > div > div > div > #c2 > .reps"+index).val();
+        var sers = $(input+" > div > div > div > #c2 > .serie"+index).val();
+
         $("#lista-esercizi").append('<li id="'+esercizio+'"><h4>'+esercizio+'</h4></li>');
-        $("#lista-serie").append('<li id="'+serie+'"><h4>'+nserie+'</h4></li>');
+        $("#lista-serie").append('<li id="'+serie+'"><h4>'+reps+'X'+sers+'</h4></li>');
+
+
+        // $("#lista-esercizi").append('<li id="'+esercizio+'"><h4>'+esercizio+'</h4></li>');
+        // $("#lista-serie").append('<li id="'+serie+'"><h4>'+nserie+'</h4></li>');
     }
     else{
         $("#"+esercizio).remove();
@@ -96,3 +106,5 @@ function addExcercise(checkbox,esercizio,nserie){
 
     }
 }
+
+
