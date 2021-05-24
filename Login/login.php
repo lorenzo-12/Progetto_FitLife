@@ -26,7 +26,7 @@
             $result1 = pg_query_params($dbconn,$q1,array($email));
             $result2 = pg_query_params($dbconn,$q2,array($email,$password));
             $result3 = pg_query_params($dbconn,$q3,array($email,$password));
-            
+
 
             if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){
                 // echo "<h1> Sorry, you are not a registred user </h1>";
