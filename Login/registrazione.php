@@ -12,6 +12,11 @@
                                 password=lollo")
             or die('could not connect' . pg_last_error() );
 
+            if(!(isset($_POST['registrazionebutton']))){
+                header("Location: index.html");
+            }
+
+
             $username = $_POST['r_username'];
             $email = $_POST['r_email'];
             $password = $_POST['r_password'];

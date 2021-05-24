@@ -12,6 +12,9 @@
                                 password=lollo")
             or die('could not connect' . pg_last_error() );
 
+            if(!(isset($_POST['loginbottone']))){
+                header("Location: index.html");
+            }
 
             $email = $_POST['l_email'];
             $password = $_POST['l_password'];
