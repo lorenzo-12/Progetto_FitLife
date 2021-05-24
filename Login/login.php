@@ -12,7 +12,6 @@
                                 password=lollo")
             or die('could not connect' . pg_last_error() );
 
-
             $email = $_POST['l_email'];
             $password = $_POST['l_password'];
             // $check = isset($_POST['log-rememberCheck']);
