@@ -12,6 +12,13 @@
                                 password=lollo")
             or die('could not connect' . pg_last_error() );
 
+            $local_user = "<script language='javascript'> localstorage.getItem('user');</script>";
+            if($local_user){
+                echo '<script language="javascript">';
+                echo 'window.location.href="../Home/index.html";';
+                echo '</script>';
+                exit();
+            }
 
             $email = $_POST['l_email'];
             $password = $_POST['l_password'];
@@ -23,7 +30,7 @@
             $result1 = pg_query_params($dbconn,$q1,array($email));
             $result2 = pg_query_params($dbconn,$q2,array($email,$password));
             $result3 = pg_query_params($dbconn,$q3,array($email,$password));
-            
+
 
             if(!($line=pg_fetch_array($result1,null, PGSQL_ASSOC))){
                 // echo "<h1> Sorry, you are not a registred user </h1>";
