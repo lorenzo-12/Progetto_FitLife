@@ -191,6 +191,7 @@ body{
 
 .ps a img{
     width: 100%;
+    background-color: whitesmoke;
     filter: grayscale(100%);
     transition: 0.4s all;
 }
