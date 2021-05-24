@@ -11,32 +11,32 @@ function checkLog(){
 checkLog();
 
 // lista degli oggetti che rappresentano gli alimenti 
-var carne1 = {p: "25",c: "271",cb: "0",g:"19", nome: "bistecca"}
-var carne2 = {p: "31",c: "165",cb: "0",g:"4", nome: "pollo"}
-var carne3 = {p: "29",c: "130",cb: "0",g:"1", nome: "tonno"}
-var carne4 = {p: "18",c: "175",cb: "8",g:"7", nome: "salmone"}
+var elem1 = {p: "25",c: "271",cb: "0",g:"19", nome: "bistecca"}
+var elem2 = {p: "31",c: "165",cb: "0",g:"4", nome: "pollo"}
+var elem3 = {p: "29",c: "130",cb: "0",g:"1", nome: "tonno"}
+var elem4 = {p: "18",c: "175",cb: "8",g:"7", nome: "salmone"}
 
-var pesce1 = {p: "25",c: "402",cb: "1",g:"33", nome: "formaggio"}
-var pesce2 = {p: "1",c: "359",cb: "83",g:"3", nome: "frutta secca"}
-var pesce3 = {p: "5",c: "546",cb: "61",g:"31", nome: "cioccolata"}
-var pesce4 = {p: "2",c: "160",cb: "9",g:"15", nome: "avocado"}
+var elem5 = {p: "25",c: "402",cb: "1",g:"33", nome: "formaggio"}
+var elem6 = {p: "1",c: "359",cb: "83",g:"3", nome: "frutta secca"}
+var elem7 = {p: "5",c: "546",cb: "61",g:"31", nome: "cioccolata"}
+var elem8 = {p: "2",c: "160",cb: "9",g:"15", nome: "avocado"}
 
-var farina1 = {p: "5",c: "131",cb: "25",g:"1", nome: "pasta"}
-var farina2 = {p: "9",c: "130",cb: "28",g:"1", nome: "pane"}
-var farina3 = {p: "6",c: "378",cb: "87",g:"1", nome: "cereali"}
-var farina4 = {p: "3",c: "265",cb: "49",g:"0", nome: "riso"}
+var elem9 = {p: "5",c: "131",cb: "25",g:"1", nome: "pasta"}
+var elem10 = {p: "9",c: "130",cb: "28",g:"1", nome: "pane"}
+var elem11 = {p: "6",c: "378",cb: "87",g:"1", nome: "cereali"}
+var elem12 = {p: "3",c: "265",cb: "49",g:"0", nome: "riso"}
 
-var frutta1 = {p: "2",c: "15",cb: "3",g:"0", nome: "insalata"}
-var frutta2 = {p: "1",c: "89",cb: "23",g:"0", nome: "banana"}
-var frutta3= {p: "1",c: "1",cb: "17",g:"0", nome: "zucchine"}
-var frutta4 = {p: "1",c: "17",cb: "4",g:"0", nome: "pomodori"}
+var elem13 = {p: "2",c: "15",cb: "3",g:"0", nome: "insalata"}
+var elem14 = {p: "1",c: "89",cb: "23",g:"0", nome: "banana"}
+var elem15= {p: "1",c: "1",cb: "17",g:"0", nome: "zucchine"}
+var elem16 = {p: "1",c: "17",cb: "4",g:"0", nome: "pomodori"}
 
 //dichiarazione di variabili che verrano poi utilizzate all'interno delle funzioni successive
 var le = new Array();
-le[0]=carne1; le[1]=carne2; le[2]=carne3; le[3]=carne4;
-le[4]=pesce1; le[5]=pesce2; le[6]=pesce3; le[7]=pesce4;
-le[8]=farina1; le[9]=farina2; le[10]=farina3; le[11]=farina4;
-le[12]=frutta1; le[13]=frutta2; le[14]=frutta3; le[15]=frutta4;
+le[0]=elem1; le[1]=elem2; le[2]=elem3; le[3]=elem4;
+le[4]=elem5; le[5]=elem6; le[6]=elem7; le[7]=elem8;
+le[8]=elem9; le[9]=elem10; le[10]=elem11; le[11]=elem12;
+le[12]=elem13; le[13]=elem14; le[14]=elem15; le[15]=elem16; 
 
 var sum_prot = document.getElementById("sum_prot");
 var sum_cal = document.getElementById("sum_cal");

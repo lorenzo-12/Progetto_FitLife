@@ -66,6 +66,14 @@ body{
     color: white;
 }
 
+#Exit-btn{
+    border-radius: 25px;
+    background: linear-gradient(to right, #ff0000, #ff0000);
+    outline: none;
+    border: 0;
+    margin-left: 2%;
+}
+
 #logSubmit-btn,#regSubmit-btn{
     border-radius: 25px;
     background: linear-gradient(to right, #198754, #738719);

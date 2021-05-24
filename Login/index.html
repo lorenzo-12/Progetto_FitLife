@@ -75,6 +75,7 @@
                       </div>
                     <div class="input-group mb-4">
                         <button id="logSubmit-btn" class="btn btn-success" type="submit" >Log In</button>
+                        <button id="Exit-btn" class="btn btn-success" type="button" onclick="logout()" >Exit</button>
                     </div>
                 </div>
             </form>
@@ -82,14 +83,14 @@
             <form action="registrazione.php" method="POST" id="register-form">
                 <div id="input-container" class="container-sm">
                     <div class="input-group mb-4">
-                        <input id="regInput-username" name="r_username" type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        <input id="regInput-username" name="r_username" type="text" class="form-control" placeholder="Username" aria-label="Username" required>
                     </div>
                     <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
                     <div class="input-group mb-4">
-                        <input id="regInput-email" name="r_email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        <input id="regInput-email" name="r_email" type="email" class="form-control" placeholder="Email" aria-label="Email" required>
                     </div>
                     <div class="input-group mb-4">
-                        <input id="regInput-psw" name="r_password" type="password" class="form-control" placeholder="Password" aria-label="Password">
+                        <input id="regInput-psw" name="r_password" type="password" class="form-control" placeholder="Password" aria-label="Password" minlength="4" required>
                     </div>
                     <div class="input-group mb-4">
                         <button id="regSubmit-btn" name="registrazionebutton" class="btn btn-success" type="submit">Register</button>
