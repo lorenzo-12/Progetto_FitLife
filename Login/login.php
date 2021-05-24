@@ -12,13 +12,6 @@
                                 password=lollo")
             or die('could not connect' . pg_last_error() );
 
-            $local_user = "<script language='javascript'> localstorage.getItem('user');</script>";
-            if($local_user){
-                echo '<script language="javascript">';
-                echo 'window.location.href="../Home/index.html";';
-                echo '</script>';
-                exit();
-            }
 
             $email = $_POST['l_email'];
             $password = $_POST['l_password'];
