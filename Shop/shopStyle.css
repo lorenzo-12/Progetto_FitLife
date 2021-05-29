@@ -75,6 +75,45 @@ h3{
     margin-top: 2%;
     font-size: 15px;
 }
+
+@media screen and (max-width: 500px) {
+    .container-shop {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .image {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+ 
+    .prod {
+        height: 50vw;
+        width: 50vw;
+        border-radius: 5%;
+    }
+
+    .prod > h3 {
+        max-width: 50vw;
+    }
+
+
+    /*
+    .add-cart {
+        
+    } */
+
+    
+}
 /* -------------------------- PAGINA CARRELLO -----------------------*/
 
 .products-container {
@@ -156,6 +195,48 @@ h3{
     display: flex;
     justify-content: flex-end;
     padding-top: 10px;
+}
+
+@media screen and (max-width:510px){
+
+    .product-header{
+        display: none;
+    }
+
+    .products{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .price{
+        justify-content: center;
+    }
+
+    .quantity{
+        justify-content: center;
+        width: fit-content;
+    }
+
+    .total{
+        justify-content: center;
+    }
+
+    .baskettotal{
+        justify-content: center;
+    }
+
+    .purchasing{
+        justify-content: center;
+    }
 }
 
 /*----FOOTER----------------*/
