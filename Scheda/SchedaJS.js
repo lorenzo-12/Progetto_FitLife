@@ -84,7 +84,7 @@ function showAccordionItem(accordionItemString){
 }
 
 //Codice per aggiungere esercizi alla scheda quando checkati
-function addExcercise(checkbox,esercizio,sezione,index){
+function addExercise(checkbox,esercizio,sezione,index){
     const input = "[name='accordion-"+sezione+"']";
    
     const serie = esercizio + "serie";

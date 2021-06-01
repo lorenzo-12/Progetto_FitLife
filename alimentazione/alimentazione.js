@@ -97,10 +97,10 @@ function aumenta(str,n){
 }
 
 
-var coll_pesce = $(".collapse_pesce");
-var coll_carne = $(".collapse_carne");
-var coll_farina = $(".collapse_farina");
-var coll_frutta = $(".collapse_frutta");
+var coll_carboidrati = $(".collapse_carboidrati");
+var coll_proteine = $(".collapse_proteine");
+var coll_grassi = $(".collapse_grassi");
+var coll_calorie = $(".collapse_calorie");
 
 
 //funzione mostra a schermo al massimo 1 solo gruppo di alimenti 
@@ -108,62 +108,62 @@ function show(str){
     //se str==1 (cioè gruppo proteine allora: 
     if(str==1){
         //se gli alimenti sono visibili allora metti tutti i gruppi invisibili
-        if(coll_carne.css("display")=="flex"){
-            coll_pesce.css("display","none");
-            coll_carne.css("display","none");
-            coll_farina.css("display","none");
-            coll_frutta.css("display","none");
+        if(coll_proteine.css("display")=="flex"){
+            coll_carboidrati.css("display","none");
+            coll_proteine.css("display","none");
+            coll_grassi.css("display","none");
+            coll_calorie.css("display","none");
         }
         //altrimenti (quindi nel caso in cui il gruppo di aliemnti delle proteine non era visibilie)
         //lo metti visibile e metti tutti gli altri a non visibili
         else{
-            coll_carne.css("display","flex");
-            coll_pesce.css("display","none");
-            coll_farina.css("display","none");
-            coll_frutta.css("display","none");
+            coll_proteine.css("display","flex");
+            coll_carboidrati.css("display","none");
+            coll_grassi.css("display","none");
+            coll_calorie.css("display","none");
         }
     }
     //stesso ragionamento di sopra ma riguardo agli alimenti del gruppo CARBOIDRATI
     if(str==2){
-        if(coll_pesce.css("display")=="flex"){
-            coll_carne.css("display","none");
-            coll_pesce.css("display","none");
-            coll_farina.css("display","none");
-            coll_frutta.css("display","none");
+        if(coll_carboidrati.css("display")=="flex"){
+            coll_proteine.css("display","none");
+            coll_carboidrati.css("display","none");
+            coll_grassi.css("display","none");
+            coll_calorie.css("display","none");
         }
         else{
-            coll_pesce.css("display","flex");
-            coll_carne.css("display","none");
-            coll_farina.css("display","none");
-            coll_frutta.css("display","none");
+            coll_carboidrati.css("display","flex");
+            coll_proteine.css("display","none");
+            coll_grassi.css("display","none");
+            coll_calorie.css("display","none");
         }
     }
     if(str==3){
-        if(coll_farina.css("display")=="flex"){
-            coll_carne.css("display","none");
-            coll_pesce.css("display","none");
-            coll_farina.css("display","none");
-            coll_frutta.css("display","none");
+        if(coll_grassi.css("display")=="flex"){
+            coll_proteine.css("display","none");
+            coll_carboidrati.css("display","none");
+            coll_grassi.css("display","none");
+            coll_calorie.css("display","none");
         }
         else{
-            coll_farina.css("display","flex");
-            coll_carne.css("display","none");
-            coll_pesce.css("display","none");
-            coll_frutta.css("display","none");
+            coll_grassi.css("display","flex");
+            coll_proteine.css("display","none");
+            coll_carboidrati.css("display","none");
+            coll_calorie.css("display","none");
         }
     } 
     if(str==4){
-        if(coll_frutta.css("display")=="flex"){
-            coll_carne.css("display","none");
-            coll_pesce.css("display","none");
-            coll_farina.css("display","none");
-            coll_frutta.css("display","none");
+        if(coll_calorie.css("display")=="flex"){
+            coll_proteine.css("display","none");
+            coll_carboidrati.css("display","none");
+            coll_grassi.css("display","none");
+            coll_calorie.css("display","none");
         }
         else{
-            coll_frutta.css("display","flex");
-            coll_carne.css("display","none");
-            coll_pesce.css("display","none");
-            coll_farina.css("display","none");
+            coll_calorie.css("display","flex");
+            coll_proteine.css("display","none");
+            coll_carboidrati.css("display","none");
+            coll_grassi.css("display","none");
         }
     }       
 }
