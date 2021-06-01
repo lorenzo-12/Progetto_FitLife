@@ -11,7 +11,7 @@ function checkLog(){
 }
 checkLog();
 
-function imgSwitch(){ //funzione per switchare da una img all'altra relativamente all'uomo e alla donna
+function imgSwitch(){ //funzione per switchare da una img all'altra, relativamente all'uomo e alla donna
     const manImg = $("#man-container");
     const womanImg = $("#woman-container");
     $("#man-icon").on("click",() => {
