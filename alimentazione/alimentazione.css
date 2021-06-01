@@ -46,8 +46,8 @@ body{
     padding: 0;
 }
 
-.collapse_carne, .collapse_pesce, 
-.collapse_farina, .collapse_frutta{
+.collapse_proteine, .collapse_carboidrati, 
+.collapse_grassi, .collapse_calorie{
     display: none;
     justify-content: space-around;
 } 
@@ -60,7 +60,7 @@ body{
 
 
 
-.card_carne{
+.card_proteine{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -216,8 +216,8 @@ body{
         width: 47vw;
     }
 
-    .collapse_carne, .collapse_pesce, 
-    .collapse_farina,.collapse_frutta{
+    .collapse_proteine, .collapse_carboidrati, 
+    .collapse_grassi, .collapse_calorie{
         /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
@@ -248,8 +248,8 @@ body{
         width: fit-content;
     }
 
-    .collapse_carne, .collapse_pesce,
-    .collapse_farina, .collapse_frutta{
+    .collapse_proteine, .collapse_carboidrati, 
+    .collapse_grassi, .collapse_calorie{
         /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
@@ -279,8 +279,8 @@ body{
         width: fit-content;
     }
 
-    .collapse_carne, .collapse_pesce, 
-    .collapse_farina, .collapse_frutta{
+    .collapse_proteine, .collapse_carboidrati, 
+    .collapse_grassi, .collapse_calorie{
         /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
@@ -306,8 +306,8 @@ body{
         width: fit-content;
     }
 
-    .collapse_carne, .collapse_pesce, 
-    .collapse_farina, .collapse_frutta{
+    .collapse_proteine, .collapse_carboidrati, 
+    .collapse_grassi, .collapse_calorie{
         /* display: inline-flex; */
         flex-wrap: wrap;
         justify-content: center;
