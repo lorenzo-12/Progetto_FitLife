@@ -95,7 +95,6 @@ body{
     flex-direction: column;
 }
 
-/* DA RIVEDERE LA PARTE RESPONSIVE */
 @media screen and (max-width: 767px) {
     #muscle-container{
         height: 100%;
@@ -201,11 +200,11 @@ body{
     flex-direction: column;
     width: 100%;
 }
+
 /* iframe video */
 /* iframe video */
 /* iframe video */
 
-/* VEDI BEFORE */
 #iframe-container::before{
     content: '';
     display: block;
@@ -292,13 +291,6 @@ body{
 #lista-serie{
     list-style: none;
 }
-
-/* #btn-delete{
-    display: flex;
-    justify-content: flex-end;
-    
-} */
-
 
 
 /*----FOOTER----------------*/

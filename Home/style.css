@@ -26,11 +26,13 @@ body{
     left: 10%;
 } */
 
-#homeAnchor{ /* PROVVISORIO */
+#homeAnchor{
     display: none;
     padding-top: 0;
     scroll-behavior: smooth;
 }
+
+/* SLIDER */
 
 .Myheader-container{
     min-height: 88vh;
@@ -86,7 +88,7 @@ body{
     transform: translateY(-3px);
 }
 
-.servizio::before{ /* fa l'animazione del foglio */
+.servizio::before{
     content: '';
     border-width: 20px;
     border-style: solid;
