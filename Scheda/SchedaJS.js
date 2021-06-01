@@ -95,10 +95,6 @@ function addExcercise(checkbox,esercizio,sezione,index){
 
         $("#lista-esercizi").append('<li id="'+esercizio+'"><h4>'+esercizio+'</h4></li>');
         $("#lista-serie").append('<li id="'+serie+'"><h4>'+reps+'X'+sers+'</h4></li>');
-
-
-        // $("#lista-esercizi").append('<li id="'+esercizio+'"><h4>'+esercizio+'</h4></li>');
-        // $("#lista-serie").append('<li id="'+serie+'"><h4>'+nserie+'</h4></li>');
     }
     else{
         $("#"+esercizio).remove();
