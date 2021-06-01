@@ -16,6 +16,7 @@ function checkLog(){
 }
 checkLog();
 
+//FUNZIONE PER FARE LOGOUT
 function logout(){
     localStorage.removeItem("user");
     location.reload();
