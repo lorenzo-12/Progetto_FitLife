@@ -11,10 +11,10 @@ checkLog();
 function serviziClick(){ //funzione per reindirizzare alle rispettive pagine indicate
                         // dai div dei servizi
     $("#servEsercizi").on("click", () => {
-         document.location.href = "../Scheda/Scheda.html"
+         document.location.href = "../Scheda/index.html"
      });
      $("#servAlim").on("click", () => {
-        document.location.href = "../alimentazione/bt.html"
+        document.location.href = "../alimentazione/alimentazione.html"
     });
     $("#servShop").on("click", () => {
         document.location.href = "../Shop/index.html"
